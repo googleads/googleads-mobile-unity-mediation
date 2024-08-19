@@ -13,7 +13,7 @@
     "name": "Google LLC",
     "url": "https://github.com/googleads/googleads-mobile-unity"
   },
-  "description": "The Google Mobile Ads mediation plugin for Meta package allows you to load and display ads from Meta Audience Network using mediation, covering waterfall and bidding integrations.",
+  "description": "The Google Mobile Ads mediation plugin for Meta package allows you to load and display ads from Meta Audience Network using mediation, covering bidding integrations.",
   "unity": "2019.4",
   "dependencies": {
     "com.google.ads.mobile": "9.0.0"
