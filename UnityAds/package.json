@@ -13,7 +13,7 @@
     "name": "Google LLC",
     "url": "https://github.com/googleads/googleads-mobile-unity-mediation"
   },
-  "description": "The Google Mobile Ads mediation plugin for Unity Ads package allows you to load and display ads from Pangle using mediation, covering waterfall and bidding integrations.",
+  "description": "The Google Mobile Ads mediation plugin for Unity Ads package allows you to load and display ads from Unity using mediation, covering waterfall and bidding integrations.",
   "unity": "2019.4",
   "dependencies": {
     "com.google.ads.mobile": "9.0.0"
