@@ -1,7 +1,10 @@
 ## Unity Ads Unity Mediation Plugin Changelog
 
-#### Version Next
+#### [Version 3.12.2](https://dl.google.com/googleadmobadssdk/mediation/unity/unity/UnityAdsUnityAdapter-3.12.2.zip)
 - Renamed `DummyClient` to `PlaceholderClient`.
+- Supports [Unity Ads Android adapter version 4.12.2.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/unity/CHANGELOG.md#version-41220).
+- Supports [Unity Ads iOS adapter version 4.12.2.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Unity/CHANGELOG.md#version-41220).
+- Built and tested with the Google Mobile Ads Unity Plugin version 9.2.0.
 
 #### [Version 3.12.1](https://dl.google.com/googleadmobadssdk/mediation/unity/unity/UnityAdsUnityAdapter-3.12.1.zip)
 - Supports [Unity Ads Android adapter version 4.12.1.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/unity/CHANGELOG.md#version-41210).
