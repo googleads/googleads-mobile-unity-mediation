@@ -1,5 +1,10 @@
 ## InMobi Unity Mediation Plugin Changelog
 
+#### [Version 4.6.4](https://dl.google.com/googleadmobadssdk/mediation/unity/inmobi/InMobiUnityAdapter-4.6.4.zip)
+- Supports [InMobi Android adapter version 10.7.5.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/inmobi/CHANGELOG.md#version-10750).
+- Supports [InMobi iOS adapter version 10.7.5.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/InMobi/CHANGELOG.md#version-10750).
+- Built and tested with the Google Mobile Ads Unity Plugin version 9.2.0.
+
 #### [Version 4.6.3](https://dl.google.com/googleadmobadssdk/mediation/unity/inmobi/InMobiUnityAdapter-4.6.3.zip)
 - Renamed `DummyClient` to `PlaceholderClient`.
 - Supports [InMobi Android adapter version 10.7.5.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/inmobi/CHANGELOG.md#version-10750).
