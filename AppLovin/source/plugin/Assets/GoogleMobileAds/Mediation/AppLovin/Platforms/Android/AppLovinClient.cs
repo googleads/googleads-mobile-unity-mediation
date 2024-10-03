@@ -37,28 +37,12 @@ namespace GoogleMobileAds.Mediation.AppLovin.Android
 
         private AppLovinClient() { }
 
-        public void Initialize()
-        {
-            AndroidJavaObject currentActivity = getCurrentActivityAndroidJavaObject();
-            AndroidJavaClass appLovin = new AndroidJavaClass(appLovinSdkClassName);
-            appLovin.CallStatic("initializeSdk", currentActivity);
-        }
-
         public void SetHasUserConsent(bool hasUserConsent)
         {
             AndroidJavaObject currentActivity = getCurrentActivityAndroidJavaObject();
             AndroidJavaClass appLovinPrivacySettings =
                     new AndroidJavaClass(appLovinPrivacySettingsClassName);
             appLovinPrivacySettings.CallStatic("setHasUserConsent", hasUserConsent,
-                                               currentActivity);
-        }
-
-        public void SetIsAgeRestrictedUser(bool isAgeRestrictedUser)
-        {
-            AndroidJavaObject currentActivity = getCurrentActivityAndroidJavaObject();
-            AndroidJavaClass appLovinPrivacySettings =
-                    new AndroidJavaClass(appLovinPrivacySettingsClassName);
-            appLovinPrivacySettings.CallStatic("setIsAgeRestrictedUser", isAgeRestrictedUser,
                                                currentActivity);
         }
 

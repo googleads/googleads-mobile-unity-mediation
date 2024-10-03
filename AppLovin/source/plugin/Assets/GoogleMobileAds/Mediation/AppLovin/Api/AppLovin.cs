@@ -20,19 +20,9 @@ namespace GoogleMobileAds.Mediation.AppLovin.Api
     {
         internal static readonly IAppLovinClient client = GetAppLovinClient();
 
-        public static void Initialize()
-        {
-            client.Initialize();
-        }
-
         public static void SetHasUserConsent(bool hasUserConsent)
         {
             client.SetHasUserConsent(hasUserConsent);
-        }
-
-        public static void SetIsAgeRestrictedUser(bool isAgeRestrictedUser)
-        {
-            client.SetIsAgeRestrictedUser(isAgeRestrictedUser);
         }
 
         public static void SetDoNotSell(bool doNotSell)
@@ -53,20 +43,9 @@ namespace GoogleMobileAds.Api.Mediation.AppLovin
     [System.Obsolete("Use `GoogleMobileAds.Mediation.AppLovin.Api.AppLovin` instead.")]
     public class AppLovin
     {
-        public static void Initialize()
-        {
-            GoogleMobileAds.Mediation.AppLovin.Api.AppLovin.Initialize();
-        }
-
         public static void SetHasUserConsent(bool hasUserConsent)
         {
             GoogleMobileAds.Mediation.AppLovin.Api.AppLovin.SetHasUserConsent(hasUserConsent);
-        }
-
-        public static void SetIsAgeRestrictedUser(bool isAgeRestrictedUser)
-        {
-            GoogleMobileAds.Mediation.AppLovin.Api.
-                AppLovin.SetIsAgeRestrictedUser(isAgeRestrictedUser);
         }
 
         public static void SetDoNotSell(bool doNotSell)

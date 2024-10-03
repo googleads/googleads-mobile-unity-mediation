@@ -30,19 +30,9 @@ namespace GoogleMobileAds.Mediation.AppLovin.iOS
             }
         }
 
-        public void Initialize()
-        {
-            Externs.GADUMInitializeAppLovin();
-        }
-
         public void SetHasUserConsent(bool hasUserConsent)
         {
             Externs.GADUMAppLovinSetHasUserConsent(hasUserConsent);
-        }
-
-        public void SetIsAgeRestrictedUser(bool isAgeRestrictedUser)
-        {
-            Externs.GADUMAppLovinSetIsAgeRestrictedUser(isAgeRestrictedUser);
         }
 
         public void SetDoNotSell(bool doNotSell)
