@@ -1,7 +1,10 @@
 ## Chartboost Unity Mediation Plugin Changelog
 
-#### Version Next
+#### [Version 4.6.1](https://dl.google.com/googleadmobadssdk/mediation/unity/chartboost/ChartboostUnityAdapter-4.6.1.zip)
 - Renamed `DummyClient` to `PlaceholderClient`.
+- Supports [Chartboost Android adapter version 9.7.0.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/chartboost/CHANGELOG.md#version-9700).
+- Supports [Chartboost iOS adapter version 9.7.0.1](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Chartboost/CHANGELOG.md#version-9701).
+- Built and tested with the Google Mobile Ads Unity Plugin version 9.3.0.
 
 #### [Version 4.6.0](https://dl.google.com/googleadmobadssdk/mediation/unity/chartboost/ChartboostUnityAdapter-4.6.0.zip)
 - Supports [Chartboost Android adapter version 9.7.0.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/chartboost/CHANGELOG.md#version-9700).
