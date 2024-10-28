@@ -1,5 +1,10 @@
 ## i-mobile Unity Mediation Plugin Changelog
 
+#### [Version 1.3.6](https://dl.google.com/googleadmobadssdk/mediation/unity/imobile/IMobileUnityAdapter-1.3.6.zip)
+- Supports [i-mobile Android adapter version 2.3.2.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/imobile/CHANGELOG.md#version-2320).
+- Supports [i-mobile iOS adapter version 2.3.4.1](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/I-Mobile/CHANGELOG.md#version-2341).
+- Built and tested with the Google Mobile Ads Unity Plugin version 9.3.0.
+
 #### [Version 1.3.5](https://dl.google.com/googleadmobadssdk/mediation/unity/imobile/IMobileUnityAdapter-1.3.5.zip)
 - Supports [i-mobile Android adapter version 2.3.2.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/imobile/CHANGELOG.md#version-2320).
 - Supports [i-mobile iOS adapter version 2.3.4.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/I-Mobile/CHANGELOG.md#version-2340).
