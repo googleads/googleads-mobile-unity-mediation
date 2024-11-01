@@ -6,11 +6,7 @@
         "GoogleMobileAds.Mediation.InMobi.Android",
         "GoogleMobileAds.Mediation.InMobi.iOS"
     ],
-    "includePlatforms": [
-        "Editor",
-        "Android",
-        "iOS"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
