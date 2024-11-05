@@ -1,9 +1,12 @@
 ## AppLovin Unity Mediation Plugin Changelog
 
-#### Next Version
+#### [Version 8.0.2](https://dl.google.com/googleadmobadssdk/mediation/unity/applovin/AppLovinUnityAdapter-8.0.2.zip)
 - Removed the following methods from the `AppLovin` class:
   * `Initialize()`
   * `SetIsAgeRestrictedUser(bool)`
+- Supports [AppLovin Android adapter version 13.0.1.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/applovin/CHANGELOG.md#version-13010).
+- Supports [AppLovin iOS adapter version 13.0.0.2](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/AppLovin/CHANGELOG.md#version-13002).
+- Built and tested with the Google Mobile Ads Unity Plugin version 9.3.0.
 
 #### [Version 7.4.1](https://dl.google.com/googleadmobadssdk/mediation/unity/applovin/AppLovinUnityAdapter-7.4.1.zip)
 - Supports [AppLovin Android adapter version 12.6.1.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/applovin/CHANGELOG.md#version-12610).
