@@ -1,5 +1,10 @@
 ## Liftoff Monetize Unity Mediation Plugin Changelog
 
+#### [Version 5.2.2](https://dl.google.com/googleadmobadssdk/mediation/unity/liftoffmonetize/LiftoffMonetizeUnityAdapter-5.2.2.zip)
+- Supports [Liftoff Monetize Android adapter version 7.4.2.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/liftoffmonetize/CHANGELOG.md#version-7420).
+- Supports [Liftoff Monetize iOS adapter version 7.4.2.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/LiftoffMonetize/CHANGELOG.md#version-7420).
+- Built and tested with the Google Mobile Ads Unity Plugin version 9.4.0.
+
 #### [Version 5.2.1](https://dl.google.com/googleadmobadssdk/mediation/unity/liftoffmonetize/LiftoffMonetizeUnityAdapter-5.2.1.zip)
 - Renamed `DummyClient` to `PlaceholderClient`.
 - Supports [Liftoff Monetize Android adapter version 7.4.0.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/liftoffmonetize/CHANGELOG.md#version-7401).
