@@ -1,5 +1,10 @@
 ## DT Exchange Unity Mediation Plugin Changelog
 
+#### [Version 3.3.8](https://dl.google.com/googleadmobadssdk/mediation/unity/dtexchange/DTExchangeUnityAdapter-3.3.8.zip)
+- Supports [DT Exchange Android adapter version 8.3.5.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/dtexchange/CHANGELOG.md#version-8350).
+- Supports [DT Exchange iOS adapter version 8.3.4.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/DTExchange/CHANGELOG.md#version-8340).
+- Built and tested with the Google Mobile Ads Unity Plugin version 9.5.0.
+
 #### [Version 3.3.7](https://dl.google.com/googleadmobadssdk/mediation/unity/dtexchange/DTExchangeUnityAdapter-3.3.7.zip)
 - Supports [DT Exchange Android adapter version 8.3.4.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/dtexchange/CHANGELOG.md#version-8340).
 - Supports [DT Exchange iOS adapter version 8.3.4.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/DTExchange/CHANGELOG.md#version-8340).
