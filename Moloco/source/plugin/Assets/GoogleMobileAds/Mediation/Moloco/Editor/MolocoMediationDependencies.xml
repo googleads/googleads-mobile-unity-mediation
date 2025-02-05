@@ -1,0 +1,14 @@
+<dependencies>
+  <androidPackages>
+    <androidPackage spec="com.google.ads.mediation:moloco:3.6.0.0">
+      <repositories>
+        <repository>https://repo.maven.apache.org/maven2/</repository>
+        <repository>https://dl.google.com/dl/android/maven2/</repository>
+      </repositories>
+    </androidPackage>
+  </androidPackages>
+
+  <iosPods>
+    <iosPod name="GoogleMobileAdsMediationMoloco" version="3.5.0.0"/>
+  </iosPods>
+</dependencies>
