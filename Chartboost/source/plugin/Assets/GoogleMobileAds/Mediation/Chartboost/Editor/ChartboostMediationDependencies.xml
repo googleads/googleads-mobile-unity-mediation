@@ -26,6 +26,6 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="GoogleMobileAdsMediationChartboost" version="9.8.0.0"/>
+    <iosPod name="GoogleMobileAdsMediationChartboost" version="9.8.0.1"/>
   </iosPods>
 </dependencies>
