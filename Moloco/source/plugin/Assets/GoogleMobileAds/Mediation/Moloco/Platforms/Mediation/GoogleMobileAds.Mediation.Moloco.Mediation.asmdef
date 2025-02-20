@@ -1,0 +1,22 @@
+{
+    "name": "GoogleMobileAds.Mediation.Moloco.Mediation",
+    "rootNamespace": "",
+    "references": [
+        "GoogleMobileAds.Mediation.Moloco.Common",
+        "GoogleMobileAds.Mediation.Moloco.Android",
+        "GoogleMobileAds.Mediation.Moloco.iOS"
+    ],
+    "includePlatforms": [
+        "Android",
+        "iOS",
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
