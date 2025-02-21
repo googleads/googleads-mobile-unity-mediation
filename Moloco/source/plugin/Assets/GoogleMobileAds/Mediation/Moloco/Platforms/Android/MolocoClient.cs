@@ -23,6 +23,11 @@ namespace GoogleMobileAds.Mediation.Moloco.Android
     public class MolocoClient : IMolocoClient
     {
         private static MolocoClient instance = new MolocoClient();
+        private const string privacyClassName =
+            "com.moloco.sdk.publisher.privacy.MolocoPrivacy";
+        private const string privacySettingsClassName =
+            "com.moloco.sdk.publisher.privacy.MolocoPrivacy$PrivacySettings";
+
         private MolocoClient() {}
 
         public static MolocoClient Instance
@@ -35,7 +40,19 @@ namespace GoogleMobileAds.Mediation.Moloco.Android
 
         public void SetDoNotSell(bool doNotSell)
         {
-            // TODO: Implement this.
+            AndroidJavaClass molocoPrivacy = new AndroidJavaClass(privacyClassName);
+            AndroidJavaObject privacySettings =
+                molocoPrivacy.GetStatic<AndroidJavaObject>("privacySettings");
+
+            AndroidJavaObject isAgeRestrictedUser =
+                privacySettings.Get<AndroidJavaObject>("isAgeRestrictedUser");
+            AndroidJavaObject isUserConsent =
+                privacySettings.Get<AndroidJavaObject>("isUserConsent");
+
+            AndroidJavaObject newPrivacySettings =
+                new AndroidJavaObject(privacySettingsClassName, isUserConsent, isAgeRestrictedUser,
+                                        new AndroidJavaObject("java.lang.Boolean", doNotSell));
+            molocoPrivacy.CallStatic("setPrivacy", newPrivacySettings);
         }
     }
 }
