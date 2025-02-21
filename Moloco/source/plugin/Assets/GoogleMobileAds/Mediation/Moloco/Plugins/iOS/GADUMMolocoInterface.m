@@ -12,30 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#if UNITY_IOS
+#import <MolocoSDK/MolocoSDK-Swift.h>
 
-using GoogleMobileAds.Mediation.Moloco.Common;
-
-namespace GoogleMobileAds.Mediation.Moloco.iOS
-{
-    public class MolocoClient : IMolocoClient
-    {
-        private static MolocoClient instance = new MolocoClient();
-        private MolocoClient() { }
-
-        public static MolocoClient Instance
-        {
-            get
-            {
-                return instance;
-            }
-        }
-
-        public void SetDoNotSell(bool doNotSell)
-        {
-            Externs.GADUMMolocoSetDoNotSell(doNotSell);
-        }
-    }
+void GADUMMolocoSetDoNotSell(BOOL doNotSell) {
+  [MolocoPrivacySettings setIsDoNotSell:doNotSell];
 }
-
-#endif

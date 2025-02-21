@@ -14,27 +14,15 @@
 
 #if UNITY_IOS
 
-using GoogleMobileAds.Mediation.Moloco.Common;
+using System.Runtime.InteropServices;
 
 namespace GoogleMobileAds.Mediation.Moloco.iOS
 {
-    public class MolocoClient : IMolocoClient
+    // Externs used by the iOS component.
+    internal class Externs
     {
-        private static MolocoClient instance = new MolocoClient();
-        private MolocoClient() { }
-
-        public static MolocoClient Instance
-        {
-            get
-            {
-                return instance;
-            }
-        }
-
-        public void SetDoNotSell(bool doNotSell)
-        {
-            Externs.GADUMMolocoSetDoNotSell(doNotSell);
-        }
+        [DllImport("__Internal")]
+        internal static extern void GADUMMolocoSetDoNotSell(bool doNotSell);
     }
 }
 
