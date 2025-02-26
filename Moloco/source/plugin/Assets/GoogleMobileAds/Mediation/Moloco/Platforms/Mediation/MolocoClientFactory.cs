@@ -23,9 +23,9 @@ namespace GoogleMobileAds.Mediation.Moloco
             #if UNITY_EDITOR
             return new GoogleMobileAds.Mediation.Moloco.Common.PlaceholderClient();
             #elif UNITY_ANDROID
-            return GoogleMobileAds.Mediation.Moloco.Android.Moloco.Instance;
+            return GoogleMobileAds.Mediation.Moloco.Android.MolocoClient.Instance;
             #elif UNITY_IOS
-            return GoogleMobileAds.Mediation.Moloco.iOS.Moloco.Instance;
+            return GoogleMobileAds.Mediation.Moloco.iOS.MolocoClient.Instance;
             #else
             return new GoogleMobileAds.Mediation.Moloco.Common.PlaceholderClient();
             #endif
