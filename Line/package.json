@@ -16,6 +16,6 @@
   "description": "The Google Mobile Ads mediation plugin for Line package allows you to load and display ads from Line using mediation, covering waterfall integrations.",
   "unity": "2019.4",
   "dependencies": {
-    "com.google.ads.mobile": "9.0.0"
+    "com.google.ads.mobile": "9.6.0"
   }
 }
