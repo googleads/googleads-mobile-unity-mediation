@@ -1,5 +1,8 @@
 ## AppLovin Unity Mediation Plugin Changelog
 
+#### [Version Next]
+- Added support to include AppLovinSDK iOS dynamic framework for all targets.
+
 #### [Version 8.1.0](https://dl.google.com/googleadmobadssdk/mediation/unity/applovin/AppLovinUnityAdapter-8.1.0.zip)
 - Supports [AppLovin Android adapter version 13.1.0.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/applovin/CHANGELOG.md#version-13100).
 - Supports [AppLovin iOS adapter version 13.1.0.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/AppLovin/CHANGELOG.md#version-13100).

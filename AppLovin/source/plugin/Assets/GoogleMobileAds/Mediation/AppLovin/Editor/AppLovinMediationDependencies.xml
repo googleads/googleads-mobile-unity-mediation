@@ -26,5 +26,6 @@
 
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationAppLovin" version="13.1.0.0"/>
+    <iosPod name="AppLovinSDK" addToAllTargets="true"/>
   </iosPods>
 </dependencies>
