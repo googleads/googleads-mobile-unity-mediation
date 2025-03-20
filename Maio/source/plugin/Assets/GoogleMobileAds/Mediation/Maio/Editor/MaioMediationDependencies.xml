@@ -27,5 +27,6 @@
 
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationMaio" version="2.1.6.1"/>
+    <iosPod name="MaioSDK-v2" addToAllTargets="true"/>
   </iosPods>
 </dependencies>
