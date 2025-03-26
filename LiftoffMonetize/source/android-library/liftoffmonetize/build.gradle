@@ -20,7 +20,7 @@ android {
 
 dependencies {
     api project(':app')
-    api 'com.google.ads.mediation:vungle:7.4.3.0'
+    api 'com.google.ads.mediation:vungle:7.4.3.1'
 }
 
 task clearAar(type: Delete) {
