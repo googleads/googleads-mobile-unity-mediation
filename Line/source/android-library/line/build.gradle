@@ -16,6 +16,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pgcfg'
         }
     }
+    lintOptions {
+        // Lint disabled because it can't be used with the latest GMA SDK and the gradle plugin used in this library.
+        checkReleaseBuilds false
+        abortOnError false
+    }
 }
 
 dependencies {
