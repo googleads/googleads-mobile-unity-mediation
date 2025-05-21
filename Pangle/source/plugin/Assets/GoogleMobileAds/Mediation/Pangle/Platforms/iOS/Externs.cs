@@ -25,7 +25,7 @@ namespace GoogleMobileAds.Mediation.Pangle.iOS
         internal static extern void GADUMPangleSetGDPRConsent(int gdpr);
 
         [DllImport("__Internal")]
-        internal static extern void GADUMPangleSetDoNotSell(int doNotSell);
+        internal static extern void GADUMPangleSetPAConsent(int paConsent);
     }
 }
 

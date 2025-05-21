@@ -29,7 +29,7 @@ namespace GoogleMobileAds.Mediation.Pangle.Common
             Debug.Log("Placeholder " + MethodBase.GetCurrentMethod().Name);
         }
 
-        public void SetDoNotSell(int doNotSell)
+        public void SetPAConsent(int paConsent)
         {
             Debug.Log("Placeholder " + MethodBase.GetCurrentMethod().Name);
         }

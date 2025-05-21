@@ -18,6 +18,6 @@ void GADUMPangleSetGDPRConsent(int GDPR) {
   [GADMediationAdapterPangle setGDPRConsent:GDPR];
 }
 
-void GADUMPangleSetDoNotSell(int doNotSell) {
-  [GADMediationAdapterPangle setDoNotSell:doNotSell];
+void GADUMPangleSetPAConsent(int paConsent) {
+  [GADMediationAdapterPangle setPAConsent:paConsent];
 }

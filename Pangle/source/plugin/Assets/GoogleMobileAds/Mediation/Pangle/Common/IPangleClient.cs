@@ -17,6 +17,6 @@ namespace GoogleMobileAds.Mediation.Pangle.Common
     public interface IPangleClient
     {
         void SetGDPRConsent(int gdpr);
-        void SetDoNotSell(int doNotSell);
+        void SetPAConsent(int paConsent);
     }
 }

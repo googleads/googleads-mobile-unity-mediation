@@ -36,9 +36,9 @@ namespace GoogleMobileAds.Mediation.Pangle.iOS
             Externs.GADUMPangleSetGDPRConsent(gdpr);
         }
 
-        public void SetDoNotSell(int doNotSell)
+        public void SetPAConsent(int paConsent)
         {
-            Externs.GADUMPangleSetDoNotSell(doNotSell);
+            Externs.GADUMPangleSetPAConsent(paConsent);
         }
     }
 }
