@@ -1,7 +1,14 @@
 ## Pangle Unity Mediation Plugin Changelog
 
-#### Version 5.0.0 (In progress)
-- Replaced SetDoNotSell() with SetPAConsent(). Note: The value passed in for SetDoNotSell() may not the be the right value for SetPAConsent(). Please ensure the right value is passed in to SetPAConsent(). Refer to https://www.pangleglobal.com/integration/android-initialize-pangle-sdk for what values can be set for PA consent.
+#### [Version 5.0.0](https://dl.google.com/googleadmobadssdk/mediation/unity/pangle/PangleUnityAdapter-5.0.0.zip)
+- Replaced `SetDoNotSell()` with `SetPAConsent()` from the `Pangle` class.
+  - The value passed in for `SetDoNotSell()` may not the be the right value for
+  `SetPAConsent()`. Please ensure the right value is passed in to`SetPAConsent()`.
+  Refer to https://www.pangleglobal.com/integration/android-initialize-pangle-sdk
+  for what values can be set for PA consent.
+- Supports [Pangle Android adapter version 7.1.0.8.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/pangle/CHANGELOG.md#version-71080).
+- Supports [Pangle iOS adapter version 7.1.1.1.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Pangle/CHANGELOG.md#version-71110).
+- Built and tested with the Google Mobile Ads Unity Plugin version 10.1.0.
 
 #### [Version 4.6.2](https://dl.google.com/googleadmobadssdk/mediation/unity/pangle/PangleUnityAdapter-4.6.2.zip)
 - Supports [Pangle Android adapter version 6.5.0.9.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/pangle/CHANGELOG.md#version-65090).
