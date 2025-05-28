@@ -25,6 +25,6 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="GoogleMobileAdsMediationVungle" version="7.5.0.0"/>
+    <iosPod name="GoogleMobileAdsMediationVungle" version="7.5.1.0"/>
   </iosPods>
 </dependencies>
