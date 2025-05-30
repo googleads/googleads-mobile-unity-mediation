@@ -1,5 +1,7 @@
 ## Liftoff Monetize Unity Mediation Plugin Changelog
 
+#### Version 5.3.2 (In progress)
+
 #### Version 5.3.1 (In progress)
 
 #### [Version 5.3.0](https://dl.google.com/googleadmobadssdk/mediation/unity/liftoffmonetize/LiftoffMonetizeUnityAdapter-5.3.0.zip)
