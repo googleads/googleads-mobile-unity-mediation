@@ -1,5 +1,8 @@
 ## Liftoff Monetize Unity Mediation Plugin Changelog
 
+#### [Version 5.3.2](https://dl.google.com/googleadmobadssdk/mediation/unity/liftoffmonetize/LiftoffMonetizeUnityAdapter-5.3.1.zip)
+- Fixed an issue where installing through OpenUPM caused the plugin to not import the packages properly.
+
 #### [Version 5.3.1](https://dl.google.com/googleadmobadssdk/mediation/unity/liftoffmonetize/LiftoffMonetizeUnityAdapter-5.3.1.zip)
 - Supports [Liftoff Monetize Android adapter version 7.5.0.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/liftoffmonetize/CHANGELOG.md#version-7500).
 - Supports [Liftoff Monetize iOS adapter version 7.5.1.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/LiftoffMonetize/CHANGELOG.md#version-7510).
