@@ -25,7 +25,7 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="GoogleMobileAdsMediationInMobi" version="10.8.3.0"/>
+    <iosPod name="GoogleMobileAdsMediationInMobi" version="10.8.3.1"/>
     <iosPod name="InMobiSDK" addToAllTargets="true"/>
   </iosPods>
 </dependencies>
