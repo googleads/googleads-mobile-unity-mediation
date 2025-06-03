@@ -1,5 +1,8 @@
 ## Liftoff Monetize Unity Mediation Plugin Changelog
 
+#### [Version 5.3.3](https://dl.google.com/googleadmobadssdk/mediation/unity/liftoffmonetize/LiftoffMonetizeUnityAdapter-5.3.1.zip)
+- Fixed an issue where installing through OpenUPM caused the plugin to not import the packages properly.
+
 #### [Version 5.3.2](https://dl.google.com/googleadmobadssdk/mediation/unity/liftoffmonetize/LiftoffMonetizeUnityAdapter-5.3.1.zip)
 - Fixed an issue where installing through OpenUPM caused the plugin to not import the packages properly.
 
