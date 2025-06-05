@@ -10,5 +10,6 @@
 
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationMoloco" version="3.9.1.0"/>
+    <iosPod name="MolocoSDKiOS" addToAllTargets="true"/>
   </iosPods>
 </dependencies>
