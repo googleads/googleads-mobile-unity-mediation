@@ -1,5 +1,7 @@
 ## Pangle Unity Mediation Plugin Changelog
 
+#### Version 5.1.0 (In progress)
+
 #### [Version 5.0.0](https://dl.google.com/googleadmobadssdk/mediation/unity/pangle/PangleUnityAdapter-5.0.0.zip)
 - Replaced `SetDoNotSell()` with `SetPAConsent()` from the `Pangle` class.
   - The value passed in for `SetDoNotSell()` may not the be the right value for
