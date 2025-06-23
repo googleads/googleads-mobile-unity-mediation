@@ -1,6 +1,9 @@
 ## Pangle Unity Mediation Plugin Changelog
 
-#### Version 5.1.0 (In progress)
+#### [Version 5.1.0](https://dl.google.com/googleadmobadssdk/mediation/unity/pangle/PangleUnityAdapter-5.1.0.zip)
+- Supports [Pangle Android adapter version 7.2.0.4.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/pangle/CHANGELOG.md#version-72040).
+- Supports [Pangle iOS adapter version 7.2.0.4.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Pangle/CHANGELOG.md#version-72040).
+- Built and tested with the Google Mobile Ads Unity Plugin version 10.2.0.
 
 #### [Version 5.0.0](https://dl.google.com/googleadmobadssdk/mediation/unity/pangle/PangleUnityAdapter-5.0.0.zip)
 - Replaced `SetDoNotSell()` with `SetPAConsent()` from the `Pangle` class.
