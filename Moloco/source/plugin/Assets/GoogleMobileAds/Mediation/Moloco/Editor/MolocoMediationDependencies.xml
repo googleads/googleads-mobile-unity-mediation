@@ -1,6 +1,6 @@
 <dependencies>
   <androidPackages>
-    <androidPackage spec="com.google.ads.mediation:moloco:3.10.0.0">
+    <androidPackage spec="com.google.ads.mediation:moloco:3.11.0.0">
       <repositories>
         <repository>https://repo.maven.apache.org/maven2/</repository>
         <repository>https://dl.google.com/dl/android/maven2/</repository>
@@ -9,7 +9,7 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="GoogleMobileAdsMediationMoloco" version="3.10.0.0"/>
+    <iosPod name="GoogleMobileAdsMediationMoloco" version="3.11.0.0"/>
     <iosPod name="MolocoSDKiOS" addToAllTargets="true"/>
   </iosPods>
 </dependencies>
