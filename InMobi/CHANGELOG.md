@@ -1,5 +1,7 @@
 ## InMobi Unity Mediation Plugin Changelog
 
+#### Version 4.7.4 (In progress)
+
 #### [Version 4.7.3](https://dl.google.com/googleadmobadssdk/mediation/unity/inmobi/InMobiUnityAdapter-4.7.3.zip)
 - Supports [InMobi Android adapter version 10.8.3.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/inmobi/CHANGELOG.md#version-10831).
 - Supports [InMobi iOS adapter version 10.8.3.1](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/InMobi/CHANGELOG.md#version-10831).
