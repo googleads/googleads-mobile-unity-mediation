@@ -1,5 +1,7 @@
 ## Line Unity Mediation Plugin Changelog
 
+#### Version 1.5.6 (In progress)
+
 #### [Version 1.5.5](https://dl.google.com/googleadmobadssdk/mediation/unity/line/LineUnityAdapter-1.5.4.zip)
 - Fixed an issue where installing through OpenUPM caused the plugin to not import the packages properly.
 
