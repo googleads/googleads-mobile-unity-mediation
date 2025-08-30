@@ -1,0 +1,17 @@
+{
+    "name": "GoogleMobileAds.Mediation.BidMachine.Api",
+    "rootNamespace": "",
+    "references": [
+        "GoogleMobileAds.Mediation.BidMachine.Common",
+        "GoogleMobileAds.Mediation.BidMachine.iOS"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
