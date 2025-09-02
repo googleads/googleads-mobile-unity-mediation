@@ -21,7 +21,7 @@ project.ext {
                 'to your Unity installation.')
     }
 
-    versionString = '1.6.1'
+    versionString = '2.0.0'
     adapterName = 'Moloco'
     pluginName = "GoogleMobileAds${adapterName}Mediation"
     pluginFileName = "${pluginName}.unitypackage"
