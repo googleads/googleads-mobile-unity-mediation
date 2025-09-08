@@ -1,0 +1,144 @@
+name: Release Mediation UPM Package
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/CHANGELOG.md'
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+        description: 'Commit SHA (leave empty to use latest)'
+        required: false
+        type: string
+      dry_run:
+        description: 'Create draft release (dry run)'
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        id: checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Find updated package with changelog
+        id: package
+        run: |
+          # PKG_PREFIX Line/packages/com.google.ads.mobile.mediation.line -> Line
+          # PKG_DIR Line/packages/com.google.ads.mobile.mediation.line/CHANGELOG.md -> Line/packages/com.google.ads.mobile.mediation.line
+          COMMIT_SHA="${{ github.event.inputs.commit_sha }}"
+          if [ -z "$COMMIT_SHA" ]; then
+            COMMIT_SHA="${{ github.sha }}"
+          fi
+
+          # Find all changed CHANGELOG.md files.
+          CHANGELOGS=$(git diff-tree --no-commit-id --name-only -r "$COMMIT_SHA" | grep -i "changelog\.md$" || true)
+
+          if [ -z "$CHANGELOGS" ]; then
+            echo "[INFO] No CHANGELOG.md file was changed in commit $COMMIT_SHA"
+            exit 0
+          fi
+
+          # Filter for CHANGELOG.md files that are in the same directory as a package.json.
+          PACKAGE_CHANGELOGS=()
+          while IFS= read -r path; do
+            PKG_DIR=$(dirname "$path")
+            if [ -f "$PKG_DIR/package.json" ]; then
+              # Check if the latest version in this CHANGELOG is marked as "in progress".
+              if ! grep -i -m1 -A1 -Eo "^#+\s*\[?version.*" "$path" | grep -qi "(in progress)"; then
+                PACKAGE_CHANGELOGS+=("$path")
+                echo "[DEBUG] Found release-ready changelog with package.json: $path."
+              else
+                echo "[DEBUG] Skipping $path - version marked as 'In progress'."
+              fi
+            else
+              echo "[DEBUG] Skipping $path - no package.json found in the same directory."
+            fi
+          done <<< "$CHANGELOGS"
+
+          PKG_COUNT=${#PACKAGE_CHANGELOGS[@]}
+          if [ "$PKG_COUNT" -eq 0 ]; then
+            echo "[DEBUG] No package CHANGELOG.md files ready for release found in commit $COMMIT_SHA."
+            exit 0
+          elif [ "$PKG_COUNT" -gt 1 ]; then
+            echo "[ERROR] ::error::Found multiple package CHANGELOG.md files ready for release in commit $COMMIT_SHA. Please release one package at a time."
+            exit 1
+          fi
+
+          CHANGELOG_PATH="${PACKAGE_CHANGELOGS[0]}"
+          PKG_DIR=$(dirname "$CHANGELOG_PATH")
+
+          # Get package prefix from the root-level directory name.
+          PKG_PREFIX=$(echo "$PKG_DIR" | cut -d'/' -f1)
+
+          # Output values for later steps.
+          echo "pkg_dir=$PKG_DIR" >> $GITHUB_OUTPUT
+          echo "pkg_prefix=$PKG_PREFIX" >> $GITHUB_OUTPUT
+
+      - name: Extract package version and release notes
+        id: package_info
+        if: steps.package.outputs.pkg_dir != ''
+        run: |
+          PKG_DIR="${{ steps.package.outputs.pkg_dir }}"
+
+          # Extract first version that's not marked as "in progress".
+          CHANGELOG_VERSION=$(grep -i -m1 -Eo '^#+\s*\[Version *\[?v?([0-9]+\.[0-9]+\.[0-9]+)\]?' "$PKG_DIR/CHANGELOG.md" | grep -Eo '([0-9]+\.[0-9]+\.[0-9]+)')
+
+          if [ -z "$CHANGELOG_VERSION" ]; then
+            echo "[ERROR] ::error::Could not find a releasable version in CHANGELOG.md."
+            exit 1
+          fi
+
+          # Extract version from package.json.
+          PKG_VERSION=$(jq -r .version "$PKG_DIR/package.json")
+          if [ "$PKG_VERSION" != "$CHANGELOG_VERSION" ]; then
+            echo "[ERROR] ::error::Version mismatch: package.json ($PKG_VERSION) vs CHANGELOG.md ($CHANGELOG_VERSION)."
+            exit 1
+          fi
+
+          # Extract release notes.
+          NOTES=$(awk 'tolower($0) ~ /^#+[[:space:]]*\[version[[:space:]]*[0-9]+\.[0-9]+\.[0-9]+\]/{i++}i==1{print}' "$PKG_DIR/CHANGELOG.md" | tail -n +2)
+          if [ -z "$NOTES" ]; then
+            echo "[ERROR] ::error::No release notes found in CHANGELOG.md."
+            exit 1
+          fi
+
+          # Output values for `release` step.
+          echo "$NOTES" >> /tmp/release_notes.md
+          {
+            echo "version=$CHANGELOG_VERSION"
+          } >> $GITHUB_OUTPUT
+
+      - name: Draft or publish a GitHub Release
+        id: release
+        if: steps.package.outputs.pkg_dir != ''
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PKG_PREFIX="${{ steps.package.outputs.pkg_prefix }}"
+          VERSION="${{ steps.package_info.outputs.version }}"
+          TAG="$PKG_PREFIX/v$VERSION"
+
+          if [[ "${{ github.event.inputs.dry_run }}" == "true" ]]; then
+            echo "[DEBUG] Creating draft release for $TAG..."
+            gh release create "$TAG" \
+              --draft \
+              --title "$TAG" \
+              --notes-file /tmp/release_notes.md
+          else
+            echo "[DEBUG] Creating release for $TAG..."
+            git tag "$TAG"
+            git push origin "$TAG"
+            gh release create "$TAG" \
+              --title "$PKG_PREFIX Unity Mediation Plugin v$VERSION" \
+              --notes-file /tmp/release_notes.md
+          fi
