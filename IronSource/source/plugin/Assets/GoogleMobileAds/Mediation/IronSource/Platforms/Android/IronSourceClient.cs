@@ -22,7 +22,7 @@ namespace GoogleMobileAds.Mediation.IronSource.Android
 {
     public class IronSourceClient : IIronSourceClient
     {
-        private const string IRONSOURCE_CLASS_NAME = "com.ironsource.mediationsdk.IronSource";
+        private const string IRONSOURCE_CLASS_NAME = "com.unity3d.mediation.LevelPlay";
 
         private static IronSourceClient instance = new IronSourceClient();
         private IronSourceClient() { }
