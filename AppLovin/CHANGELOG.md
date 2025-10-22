@@ -1,16 +1,19 @@
 ## AppLovin Unity Mediation Plugin Changelog
 
-#### Version 8.4.1 (In progress)
+#### [Version 8.4.1](https://dl.google.com/googleadmobadssdk/mediation/unity/applovin/AppLovinUnityAdapter-8.4.1.zip)
+- Supports [AppLovin Android adapter version 13.4.0.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/applovin/CHANGELOG.md#version-13401).
+- Supports [AppLovin iOS adapter version 13.4.0.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/AppLovin/CHANGELOG.md#version-13400).
+- Built and tested with the Google Mobile Ads Unity Plugin version 10.5.0.
 
 #### [Version 8.4.0](https://dl.google.com/googleadmobadssdk/mediation/unity/applovin/AppLovinUnityAdapter-8.4.0.zip)
 - Supports [AppLovin Android adapter version 13.4.0.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/applovin/CHANGELOG.md#version-13400).
 - Supports [AppLovin iOS adapter version 13.4.0.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/AppLovin/CHANGELOG.md#version-13400).
-- Built and tested with the Google Mobile Ads Unity Plugin version 10.4.2
+- Built and tested with the Google Mobile Ads Unity Plugin version 10.4.2.
 
 #### [Version 8.3.2](https://dl.google.com/googleadmobadssdk/mediation/unity/applovin/AppLovinUnityAdapter-8.3.2.zip)
 - Supports [AppLovin Android adapter version 13.3.1.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/applovin/CHANGELOG.md#version-13311).
 - Supports [AppLovin iOS adapter version 13.3.1.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/AppLovin/CHANGELOG.md#version-13310).
-- Built and tested with the Google Mobile Ads Unity Plugin version 10.2.0
+- Built and tested with the Google Mobile Ads Unity Plugin version 10.2.0.
 
 #### [Version 8.3.1](https://dl.google.com/googleadmobadssdk/mediation/unity/applovin/AppLovinUnityAdapter-8.3.1.zip)
 - Supports [AppLovin Android adapter version 13.3.1.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/applovin/CHANGELOG.md#version-13310).
