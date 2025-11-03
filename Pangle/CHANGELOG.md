@@ -2,7 +2,10 @@
 
 #### Version 5.7.0 (In progress)
 
-#### Version 5.6.0 (In progress)
+#### [Version 5.6.0](https://dl.google.com/googleadmobadssdk/mediation/unity/pangle/PangleUnityAdapter-5.6.0.zip)
+- Supports [Pangle Android adapter version 7.6.0.5.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/pangle/CHANGELOG.md#version-76050).
+- Supports [Pangle iOS adapter version 7.7.0.4.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Pangle/CHANGELOG.md#version-77040).
+- Built and tested with the Google Mobile Ads Unity Plugin version 10.5.0.
 
 #### [Version 5.5.3](https://dl.google.com/googleadmobadssdk/mediation/unity/pangle/PangleUnityAdapter-5.5.3.zip)
 - Supports [Pangle Android adapter version 7.6.0.4.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/pangle/CHANGELOG.md#version-76041).
