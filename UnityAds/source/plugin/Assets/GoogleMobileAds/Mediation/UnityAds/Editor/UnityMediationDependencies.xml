@@ -35,6 +35,6 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="GoogleMobileAdsMediationUnity" version="4.16.2.0"/>
+    <iosPod name="GoogleMobileAdsMediationUnity" version="4.16.3.0"/>
   </iosPods>
 </dependencies>
