@@ -1,5 +1,7 @@
 ## PubMatic Unity Mediation Plugin Changelog
 
+#### Version 1.3.1 (In progress)
+
 #### [Version 1.3.0](https://dl.google.com/googleadmobadssdk/mediation/unity/pubmatic/PubMaticUnityAdapter-1.3.0.zip)
 - Supports [PubMatic Android adapter version 4.10.0.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/pubmatic/CHANGELOG.md#version-41000).
 - Supports [PubMatic iOS adapter version 4.10.0.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/PubMatic/CHANGELOG.md#version-41000).
