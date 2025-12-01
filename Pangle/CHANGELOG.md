@@ -1,5 +1,7 @@
 ## Pangle Unity Mediation Plugin Changelog
 
+#### Version 5.8.0 (In progress)
+
 #### [Version 5.7.1](https://dl.google.com/googleadmobadssdk/mediation/unity/pangle/PangleUnityAdapter-5.7.1.zip)
 - Supports [Pangle Android adapter version 7.7.0.2.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/pangle/CHANGELOG.md#version-77020).
 - Supports [Pangle iOS adapter version 7.7.0.7.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Pangle/CHANGELOG.md#version-77070).
