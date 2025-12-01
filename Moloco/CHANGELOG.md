@@ -1,5 +1,7 @@
 ## Moloco Unity Mediation Plugin Changelog
 
+#### Version 3.0.0 (In progress)
+
 #### Version 2.2.1 (In progress)
 
 #### [Version 2.2.0](https://dl.google.com/googleadmobadssdk/mediation/unity/moloco/MolocoUnityAdapter-2.2.0.zip)
