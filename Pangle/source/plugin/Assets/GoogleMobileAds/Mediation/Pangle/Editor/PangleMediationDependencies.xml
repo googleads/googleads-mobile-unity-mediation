@@ -26,6 +26,6 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="GoogleMobileAdsMediationPangle" version="7.8.0.5.0"/>
+    <iosPod name="GoogleMobileAdsMediationPangle" version="7.8.0.6.0"/>
   </iosPods>
 </dependencies>
