@@ -1,5 +1,7 @@
 ## DT Exchange Unity Mediation Plugin Changelog
 
+#### Version 3.5.3 (In progress)
+
 #### Version 3.5.2 (In progress)
 
 #### [Version 3.5.1](https://dl.google.com/googleadmobadssdk/mediation/unity/dtexchange/DTExchangeUnityAdapter-3.5.1.zip)
