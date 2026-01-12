@@ -16,7 +16,7 @@
 
 <dependencies>
   <androidPackages>
-    <androidPackage spec="com.google.ads.mediation:pubmatic:4.10.0.1">
+    <androidPackage spec="com.google.ads.mediation:pubmatic:4.11.0.0">
       <repositories>
         <repository>https://repo.maven.apache.org/maven2/</repository>
         <repository>https://dl.google.com/dl/android/maven2/</repository>
@@ -26,6 +26,6 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="GoogleMobileAdsMediationPubMatic" version="4.10.0.0"/>
+    <iosPod name="GoogleMobileAdsMediationPubMatic" version="4.11.0.0"/>
   </iosPods>
 </dependencies>
