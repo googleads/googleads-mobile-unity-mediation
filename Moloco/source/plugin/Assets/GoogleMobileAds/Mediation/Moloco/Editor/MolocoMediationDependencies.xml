@@ -9,7 +9,7 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="GoogleMobileAdsMediationMoloco" version="4.1.2.0"/>
+    <iosPod name="GoogleMobileAdsMediationMoloco" version="4.2.0.0"/>
     <iosPod name="MolocoSDKiOS" addToAllTargets="true"/>
   </iosPods>
 </dependencies>
