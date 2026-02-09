@@ -16,7 +16,7 @@
 
 <dependencies>
   <androidPackages>
-    <androidPackage spec="com.google.ads.mediation:chartboost:9.11.0.0">
+    <androidPackage spec="com.google.ads.mediation:chartboost:9.11.0.1">
       <repositories>
         <repository>https://repo.maven.apache.org/maven2/</repository>
         <repository>https://dl.google.com/dl/android/maven2/</repository>
@@ -26,6 +26,6 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="GoogleMobileAdsMediationChartboost" version="9.11.0.1"/>
+    <iosPod name="GoogleMobileAdsMediationChartboost" version="9.11.0.2"/>
   </iosPods>
 </dependencies>
