@@ -6,11 +6,7 @@
         "GoogleMobileAds.Mediation.Pangle.Android",
         "GoogleMobileAds.Mediation.Pangle.iOS"
     ],
-    "includePlatforms": [
-        "Android",
-        "iOS",
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
