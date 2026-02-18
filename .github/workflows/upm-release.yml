@@ -35,7 +35,7 @@ jobs:
         run: |
           # PKG_PREFIX Line/packages/com.google.ads.mobile.mediation.line -> Line
           # PKG_DIR Line/packages/com.google.ads.mobile.mediation.line/CHANGELOG.md -> Line/packages/com.google.ads.mobile.mediation.line
-          COMMIT_SHA="${{ github.event.inputs.commit_sha }}"
+          COMMIT_SHA="${GITHUB_EVENT_INPUTS_COMMIT_SHA}"
           if [ -z "$COMMIT_SHA" ]; then
             COMMIT_SHA="${{ github.sha }}"
           fi
@@ -83,12 +83,14 @@ jobs:
           # Output values for later steps.
           echo "pkg_dir=$PKG_DIR" >> $GITHUB_OUTPUT
           echo "pkg_prefix=$PKG_PREFIX" >> $GITHUB_OUTPUT
+        env:
+          GITHUB_EVENT_INPUTS_COMMIT_SHA: ${{ github.event.inputs.commit_sha }}
 
       - name: Extract package version and release notes
         id: package_info
         if: steps.package.outputs.pkg_dir != ''
         run: |
-          PKG_DIR="${{ steps.package.outputs.pkg_dir }}"
+          PKG_DIR="${STEPS_PACKAGE_OUTPUTS_PKG_DIR}"
 
           # Extract first version that's not marked as "in progress".
           CHANGELOG_VERSION=$(grep -i -m1 -Eo '^#+\s*\[Version *\[?v?([0-9]+\.[0-9]+\.[0-9]+)\]?' "$PKG_DIR/CHANGELOG.md" | grep -Eo '([0-9]+\.[0-9]+\.[0-9]+)')
@@ -117,18 +119,23 @@ jobs:
           {
             echo "version=$CHANGELOG_VERSION"
           } >> $GITHUB_OUTPUT
+        env:
+          STEPS_PACKAGE_OUTPUTS_PKG_DIR: ${{ steps.package.outputs.pkg_dir }}
 
       - name: Draft or publish a GitHub Release
         id: release
         if: steps.package.outputs.pkg_dir != ''
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STEPS_PACKAGE_OUTPUTS_PKG_PREFIX: ${{ steps.package.outputs.pkg_prefix }}
+          STEPS_PACKAGE_INFO_OUTPUTS_VERSION: ${{ steps.package_info.outputs.version }}
+          GITHUB_EVENT_INPUTS_DRY_RUN: ${{ github.event.inputs.dry_run }}
         run: |
-          PKG_PREFIX="${{ steps.package.outputs.pkg_prefix }}"
-          VERSION="${{ steps.package_info.outputs.version }}"
+          PKG_PREFIX="${STEPS_PACKAGE_OUTPUTS_PKG_PREFIX}"
+          VERSION="${STEPS_PACKAGE_INFO_OUTPUTS_VERSION}"
           TAG="$PKG_PREFIX/v$VERSION"
 
-          if [[ "${{ github.event.inputs.dry_run }}" == "true" ]]; then
+          if [[ "${GITHUB_EVENT_INPUTS_DRY_RUN}" == "true" ]]; then
             echo "[DEBUG] Creating draft release for $TAG..."
             gh release create "$TAG" \
               --draft \
