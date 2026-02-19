@@ -25,7 +25,7 @@ android {
 
 dependencies {
     api project(':app')
-    api 'com.google.ads.mediation:line:3.0.1.0'
+    api 'com.google.ads.mediation:line:3.0.1.1'
 }
 
 task clearAar(type: Delete) {
