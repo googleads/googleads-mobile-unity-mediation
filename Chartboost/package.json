@@ -1,6 +1,6 @@
 {
   "name": "com.google.ads.mobile.mediation.chartboost",
-  "version": "4.11.1",
+  "version": "4.11.2",
   "displayName": "Google Mobile Ads Chartboost Mediation",
   "keywords": [
     "Google",
@@ -17,6 +17,6 @@
   "description": "The Google Mobile Ads mediation plugin for Chartboost package allows you to load and display ads from Chartboost using mediation, covering waterfall and bidding integrations.",
   "unity": "2019.4",
   "dependencies": {
-    "com.google.ads.mobile": "10.0.0"
+    "com.google.ads.mobile": "11.0.0"
   }
 }
