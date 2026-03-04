@@ -1,6 +1,6 @@
 {
   "name": "com.google.ads.mobile.mediation.dtexchange",
-  "version": "3.5.4",
+  "version": "3.5.5",
   "displayName": "Google Mobile Ads DT Exchange Mediation",
   "keywords": [
     "Google",
@@ -16,6 +16,6 @@
   "description": "The Google Mobile Ads mediation plugin for DT Exchange package allows you to load and display ads from DT Exchange using mediation, covering waterfall integrations.",
   "unity": "2019.4",
   "dependencies": {
-    "com.google.ads.mobile": "10.0.0"
+    "com.google.ads.mobile": "11.0.0"
   }
 }
