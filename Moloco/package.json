@@ -1,6 +1,6 @@
 {
   "name": "com.google.ads.mobile.mediation.moloco",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "displayName": "Google Mobile Ads Moloco Mediation",
   "keywords": [
     "Google",
@@ -16,6 +16,6 @@
   "description": "The Google Mobile Ads mediation plugin for Moloco package allows you to load and display ads from Moloco using mediation, covering bidding integrations.",
   "unity": "2019.4",
   "dependencies": {
-    "com.google.ads.mobile": "10.0.0"
+    "com.google.ads.mobile": "11.0.0"
   }
 }
