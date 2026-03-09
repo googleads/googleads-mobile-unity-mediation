@@ -1,5 +1,7 @@
 ## Pangle Unity Mediation Plugin Changelog
 
+#### Version 5.10.0 (In progress)
+
 #### Version 5.9.0 (In progress)
 
 #### [Version 5.8.5](https://dl.google.com/googleadmobadssdk/mediation/unity/pangle/PangleUnityAdapter-5.8.5.zip)
