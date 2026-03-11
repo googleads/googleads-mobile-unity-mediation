@@ -14,10 +14,6 @@
 
 #import <PangleAdapter/PangleAdapter.h>
 
-void GADUMPangleSetGDPRConsent(int GDPR) {
-  [GADMediationAdapterPangle setGDPRConsent:GDPR];
-}
-
 void GADUMPangleSetPAConsent(int paConsent) {
   [GADMediationAdapterPangle setPAConsent:paConsent];
 }

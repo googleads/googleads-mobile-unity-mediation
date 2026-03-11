@@ -38,9 +38,9 @@ namespace GoogleMobileAds.Mediation.Pangle.Android
 
         public void SetGDPRConsent(int gdpr)
         {
-            AndroidJavaClass PangleMediationAdapter =
-                    new AndroidJavaClass(pangleMediationAdapterClassName);
-            PangleMediationAdapter.CallStatic("setGDPRConsent", gdpr);
+            MonoBehaviour.print("[Pangle Plugin] 'SetGDPRConsent' is now deprecated and will be " +
+                    "removed in a future release. GDPR consent is now automatically read by the " +
+                    "Pangle SDK.");
         }
 
         public void SetPAConsent(int paConsent)

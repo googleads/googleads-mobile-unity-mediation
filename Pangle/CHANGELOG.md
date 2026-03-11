@@ -1,6 +1,9 @@
 ## Pangle Unity Mediation Plugin Changelog
 
 #### Version 5.9.0 (In progress)
+- Deprecated the `SetGDPRConsent()` method from the `Pangle` class. The Pangle
+SDK now automatically handles consent.
+  - This method is now a no-op and will be removed in a future release.
 
 #### [Version 5.8.5](https://dl.google.com/googleadmobadssdk/mediation/unity/pangle/PangleUnityAdapter-5.8.5.zip)
 - Supports [Pangle Android adapter version 7.8.5.9.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/pangle/CHANGELOG.md#version-78590).
