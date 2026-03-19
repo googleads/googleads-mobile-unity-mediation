@@ -19,6 +19,7 @@ namespace GoogleMobileAds.Mediation.LiftoffMonetize.Api
     public abstract class LiftoffMonetizeMediationExtras : MediationExtras
     {
         public const string UserIdKey = "user_id";
+        public const string BackButtonImmediatelyEnabledKey = "back_button_immediately_enabled";
 
         public LiftoffMonetizeMediationExtras() : base() { }
 
@@ -30,6 +31,12 @@ namespace GoogleMobileAds.Mediation.LiftoffMonetize.Api
         public void SetUserId(string userId)
         {
             this.Extras.Add(UserIdKey, userId);
+        }
+
+        public void SetBackButtonImmediatelyEnabled(bool backButtonImmediatelyEnabled)
+        {
+            this.Extras.Add(BackButtonImmediatelyEnabledKey,
+                    backButtonImmediatelyEnabled.ToString());
         }
     }
 }

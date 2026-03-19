@@ -26,6 +26,8 @@ import java.util.HashMap;
 abstract class VungleUnityExtrasBuilder implements AdNetworkExtras {
 
   private static final String USER_ID_KEY = "user_id";
+  private static final String BACK_BUTTON_IMMEDIATELY_ENABLED_KEY =
+      "back_button_immediately_enabled";
 
   @Override
   public Bundle buildExtras(HashMap<String, String> extras) {
@@ -34,6 +36,13 @@ abstract class VungleUnityExtrasBuilder implements AdNetworkExtras {
     String userId = extras.get(USER_ID_KEY);
     if (!TextUtils.isEmpty(userId)) {
       vungleExtras.putString(VungleConstants.KEY_USER_ID, userId);
+    }
+
+    String backButtonImmediatelyEnabled = extras.get(BACK_BUTTON_IMMEDIATELY_ENABLED_KEY);
+    if (!TextUtils.isEmpty(backButtonImmediatelyEnabled)) {
+      vungleExtras.putBoolean(
+          VungleConstants.KEY_BACK_BUTTON_IMMEDIATELY_ENABLED,
+          Boolean.parseBoolean(backButtonImmediatelyEnabled));
     }
 
     return vungleExtras;

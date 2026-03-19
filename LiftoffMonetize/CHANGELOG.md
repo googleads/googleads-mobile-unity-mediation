@@ -1,5 +1,8 @@
 ## Liftoff Monetize Unity Mediation Plugin Changelog
 
+#### Next Version
+- Added `SetBackButtonImmediatelyEnabled(bool)` to `LiftoffMonetizeMediationExtras`. Set this to `true` to enable the back button immediately for app open ads. This feature is Android only.
+
 #### [Version 5.7.1](https://dl.google.com/googleadmobadssdk/mediation/unity/liftoffmonetize/LiftoffMonetizeUnityAdapter-5.7.1.zip)
 - Supports [Liftoff Monetize Android adapter version 7.7.1.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/liftoffmonetize/CHANGELOG.md#version-7710).
 - Supports [Liftoff Monetize iOS adapter version 7.7.1.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/LiftoffMonetize/CHANGELOG.md#version-7710).
