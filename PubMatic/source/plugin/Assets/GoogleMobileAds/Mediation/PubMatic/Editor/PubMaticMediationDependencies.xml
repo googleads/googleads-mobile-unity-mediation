@@ -27,5 +27,6 @@
 
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationPubMatic" version="5.0.0.0"/>
+    <iosPod name="OpenWrapSDK" addToAllTargets="true"/>
   </iosPods>
 </dependencies>
