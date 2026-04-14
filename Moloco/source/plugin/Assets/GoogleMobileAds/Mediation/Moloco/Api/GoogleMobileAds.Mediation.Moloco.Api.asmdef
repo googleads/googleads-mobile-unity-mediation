@@ -8,7 +8,11 @@
         "GoogleMobileAds.Mediation.Moloco.Android",
         "GoogleMobileAds.Mediation.Moloco.iOS"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Android",
+        "Editor",
+        "iOS"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

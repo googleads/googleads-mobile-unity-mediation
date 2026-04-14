@@ -7,7 +7,11 @@
         "GoogleMobileAds.Mediation.Pangle.Mediation"
     ],
     "references": [],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Android",
+        "Editor",
+        "iOS"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
