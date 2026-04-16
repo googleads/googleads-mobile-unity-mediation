@@ -6,11 +6,7 @@
         "GoogleMobileAds.Mediation.MyTarget.Android",
         "GoogleMobileAds.Mediation.MyTarget.iOS"
     ],
-    "includePlatforms": [
-        "Editor",
-        "Android",
-        "iOS"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

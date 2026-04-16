@@ -6,11 +6,7 @@
 		"GoogleMobileAds.Mediation.IronSource.Android",
 		"GoogleMobileAds.Mediation.IronSource.iOS"
     ],
-    "includePlatforms": [
-        "Editor",
-		"Android",
-        "iOS"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
