@@ -188,51 +188,33 @@ cp "${template_adapter_dir}/CHANGELOG.md.meta" "${new_adapter_dir}/CHANGELOG.md.
 cp "${template_adapter_dir}/build.gradle.meta" "${new_adapter_dir}/build.gradle.meta"
 cp "${template_adapter_dir}/package.json.meta" "${new_adapter_dir}/package.json.meta"
 cp "${template_adapter_dir}/source.meta" "${new_adapter_dir}/source.meta"
-cp "${template_adapter_dir}/source/plugin.meta" "${new_adapter_dir}/source/plugin.meta"
-cp "${template_adapter_dir}/source/plugin/Assets.meta" "${new_adapter_dir}/source/plugin/Assets.meta"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds.meta"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation.meta"
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}.meta"
 
 # C# API and Common
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Api/MyTarget.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}.cs"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Api/MyTarget.cs.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}.cs.meta"
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Common/IMyTargetClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/I${adapter_name}Client.cs"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Common/IMyTargetClient.cs.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/I${adapter_name}Client.cs.meta"
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Common/PlaceholderClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/PlaceholderClient.cs"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Common/PlaceholderClient.cs.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/PlaceholderClient.cs.meta"
 
 # C# Platform Factories
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Mediation/MyTargetClientFactory.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Mediation/${adapter_name}ClientFactory.cs"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Mediation/MyTargetClientFactory.cs.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Mediation/${adapter_name}ClientFactory.cs.meta"
 
 # C# Android Platform
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Android/MyTargetClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Android/${adapter_name}Client.cs"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Android/MyTargetClient.cs.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Android/${adapter_name}Client.cs.meta"
 
 # C# iOS Platform
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/iOS/MyTargetClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/${adapter_name}Client.cs"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/iOS/MyTargetClient.cs.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/${adapter_name}Client.cs.meta"
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/iOS/Externs.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/Externs.cs"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/iOS/Externs.cs.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/Externs.cs.meta"
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Plugins/iOS/GADUMMyTargetInterface.m" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Plugins/iOS/GADUM${adapter_name}Interface.m"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Plugins/iOS/GADUMMyTargetInterface.m.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Plugins/iOS/GADUM${adapter_name}Interface.m.meta"
 
 # Mediation Dependencies XML
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Editor/MyTargetMediationDependencies.xml" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Editor/${adapter_name}MediationDependencies.xml"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Editor/MyTargetMediationDependencies.xml.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Editor/${adapter_name}MediationDependencies.xml.meta"
 
 # ASMDEF files
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Api/Api.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/GoogleMobileAds.Mediation.${adapter_name}.Api.asmdef"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Api/Api.asmdef.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/GoogleMobileAds.Mediation.${adapter_name}.Api.asmdef.meta"
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Common/Common.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/GoogleMobileAds.Mediation.${adapter_name}.Common.asmdef"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Common/Common.asmdef.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/GoogleMobileAds.Mediation.${adapter_name}.Common.asmdef.meta"
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Android/Android.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Android/GoogleMobileAds.Mediation.${adapter_name}.Android.asmdef"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Android/Android.asmdef.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Android/GoogleMobileAds.Mediation.${adapter_name}.Android.asmdef.meta"
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/iOS/iOS.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/GoogleMobileAds.Mediation.${adapter_name}.iOS.asmdef"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/iOS/iOS.asmdef.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/GoogleMobileAds.Mediation.${adapter_name}.iOS.asmdef.meta"
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Mediation/Mediation.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Mediation/GoogleMobileAds.Mediation.${adapter_name}.Mediation.asmdef"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Mediation/Mediation.asmdef.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Mediation/GoogleMobileAds.Mediation.${adapter_name}.Mediation.asmdef.meta"
 
 # Optional: Copy Extras templates if -with_extras is used
 if [[ "$with_extras" == true ]]; then
@@ -257,16 +239,11 @@ if [[ "$with_extras" == true ]]; then
 
   # Copy iOS Extras Builder
   cp "${extras_template_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/LiftoffMonetize/Api/LiftoffMonetizeMediationExtras.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}MediationExtras.cs"
-  cp "${extras_template_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/LiftoffMonetize/Api/LiftoffMonetizeMediationExtras.cs.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}MediationExtras.cs.meta"
   cp "${extras_template_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/LiftoffMonetize/Api/LiftoffMonetizeInterstitialMediationExtras.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}InterstitialMediationExtras.cs"
-  cp "${extras_template_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/LiftoffMonetize/Api/LiftoffMonetizeInterstitialMediationExtras.cs.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}InterstitialMediationExtras.cs.meta"
   cp "${extras_template_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/LiftoffMonetize/Api/LiftoffMonetizeRewardedVideoMediationExtras.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}RewardedVideoMediationExtras.cs"
-  cp "${extras_template_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/LiftoffMonetize/Api/LiftoffMonetizeRewardedVideoMediationExtras.cs.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}RewardedVideoMediationExtras.cs.meta"
 
   cp "${extras_template_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/LiftoffMonetize/Plugins/iOS/LiftoffMonetizeExtrasBuilder.h" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Plugins/iOS/${adapter_name}ExtrasBuilder.h"
-  cp "${extras_template_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/LiftoffMonetize/Plugins/iOS/LiftoffMonetizeExtrasBuilder.h.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Plugins/iOS/${adapter_name}ExtrasBuilder.h.meta"
   cp "${extras_template_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/LiftoffMonetize/Plugins/iOS/LiftoffMonetizeExtrasBuilder.m" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Plugins/iOS/${adapter_name}ExtrasBuilder.m"
-  cp "${extras_template_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/LiftoffMonetize/Plugins/iOS/LiftoffMonetizeExtrasBuilder.m.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Plugins/iOS/${adapter_name}ExtrasBuilder.m.meta"
 fi
 
 # 4) Replace placeholders
@@ -379,6 +356,10 @@ if [[ "$with_extras" == true ]]; then
     -e "s/LiftoffMonetizeExtrasBuilder/${adapter_name}ExtrasBuilder/g" \
     {} +
 fi
+
+# 5) Generate .meta files for source directory
+echo "Generating .meta files for source/..."
+blaze run --config=darwin_arm64 //third_party/library_wrapper/release_tools/unity:unity_metadata_generator -- -r -x -i "${new_adapter_dir}/source/"
 
 echo "Done! New adapter structure created at ${new_adapter_dir}"
 echo ""
