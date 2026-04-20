@@ -1,0 +1,18 @@
+{
+    "name": "GoogleMobileAds.Mediation.Bigo.Mediation",
+    "rootNamespace": "",
+    "references": [
+        "GoogleMobileAds.Mediation.Bigo.Common",
+        "GoogleMobileAds.Mediation.Bigo.Android",
+        "GoogleMobileAds.Mediation.Bigo.iOS"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
