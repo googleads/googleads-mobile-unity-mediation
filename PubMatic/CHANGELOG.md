@@ -1,6 +1,6 @@
 ## PubMatic Unity Mediation Plugin Changelog
 
-#### Next Version
+#### Version 2.0.1 (In progress)
 - Updated the plugin to include `OpenWrapSDK` dynamic framework for all iOS targets.
 
 #### [Version 2.0.0](https://dl.google.com/googleadmobadssdk/mediation/unity/pubmatic/PubMaticUnityAdapter-2.0.0.zip)
