@@ -5,6 +5,7 @@
 defaultTasks 'exportPackage'
 
 // Project level variables.
+// TEST
 project.ext {
     unity_exe = System.getProperty("UNITY_EXE")
     if (unity_exe == null || unity_exe.isEmpty()) {
