@@ -22,22 +22,8 @@ namespace GoogleMobileAds.Mediation.Bigo.iOS
     internal class Externs
     {
         [DllImport("__Internal")]
-        internal static extern void GADUMBigoSetUserConsent(bool userConsent);
+        internal static extern void GADUMBigoSetCoppaConsent(bool consent);
 
-        [DllImport("__Internal")]
-        internal static extern bool GADUMBigoGetUserConsent();
-
-        [DllImport("__Internal")]
-        internal static extern void GADUMBigoSetUserAgeRestricted(bool userAgeRestricted);
-
-        [DllImport("__Internal")]
-        internal static extern bool GADUMBigoIsUserAgeRestricted();
-
-        [DllImport("__Internal")]
-        internal static extern void GADUMBigoSetCCPAUserConsent(bool ccpaUserConsent);
-
-        [DllImport("__Internal")]
-        internal static extern bool GADUMBigoGetCCPAUserConsent();
     }
 }
 

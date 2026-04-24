@@ -16,11 +16,6 @@ namespace GoogleMobileAds.Mediation.Bigo.Common
 {
     public interface IBigoClient
     {
-        void SetUserConsent(bool userConsent);
-        bool GetUserConsent();
-        void SetUserAgeRestricted(bool userAgeRestricted);
-        bool IsUserAgeRestricted();
-        void SetCCPAUserConsent(bool ccpaUserConsent);
-        bool GetCCPAUserConsent();
+        void SetCoppaConsent(bool consent);
     }
 }

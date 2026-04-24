@@ -25,7 +25,6 @@ namespace GoogleMobileAds.Mediation.Bigo.Android
         private static BigoClient instance = new BigoClient();
         private BigoClient() {}
 
-        private const string BIGO_PRIVACY_CLASS_NAME = "com.my.target.common.BigoPrivacy";
 
         public static BigoClient Instance
         {
@@ -35,51 +34,18 @@ namespace GoogleMobileAds.Mediation.Bigo.Android
             }
         }
 
-        public void SetUserConsent(bool userConsent)
+        public void SetCoppaConsent(bool consent)
         {
-            AndroidJavaClass bigoPrivacy = new AndroidJavaClass(BIGO_PRIVACY_CLASS_NAME);
-            bigoPrivacy.CallStatic("setUserConsent", userConsent);
+            AndroidJavaClass bigoAdSdk = new AndroidJavaClass("sg.bigo.ads.BigoAdSdk");
+            AndroidJavaClass consentOptions = new AndroidJavaClass("sg.bigo.ads.ConsentOptions");
+            AndroidJavaObject coppaOption = consentOptions.GetStatic<AndroidJavaObject>("COPPA");
+            
+            AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+            AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
+
+            bigoAdSdk.CallStatic("setUserConsent", currentActivity, coppaOption, consent);
         }
 
-        public bool GetUserConsent()
-        {
-            AndroidJavaClass bigoPrivacy = new AndroidJavaClass(BIGO_PRIVACY_CLASS_NAME);
-            AndroidJavaObject bigoCurrentPrivacy =
-                    bigoPrivacy.CallStatic<AndroidJavaObject>("currentPrivacy");
-            AndroidJavaObject userConsent =
-                    bigoCurrentPrivacy.Get<AndroidJavaObject>("userConsent");
-            return userConsent.Call<bool>("booleanValue");
-        }
-
-        public void SetUserAgeRestricted(bool userAgeRestricted)
-        {
-            AndroidJavaClass bigoPrivacy = new AndroidJavaClass(BIGO_PRIVACY_CLASS_NAME);
-            bigoPrivacy.CallStatic("setUserAgeRestricted", userAgeRestricted);
-        }
-
-        public bool IsUserAgeRestricted()
-        {
-            AndroidJavaClass bigoPrivacy = new AndroidJavaClass(BIGO_PRIVACY_CLASS_NAME);
-            AndroidJavaObject bigoCurrentPrivacy =
-                    bigoPrivacy.CallStatic<AndroidJavaObject>("currentPrivacy");
-            return bigoCurrentPrivacy.Get<bool>("userAgeRestricted");
-        }
-
-        public void SetCCPAUserConsent(bool ccpaUserConsent)
-        {
-            AndroidJavaClass bigoPrivacy = new AndroidJavaClass(BIGO_PRIVACY_CLASS_NAME);
-            bigoPrivacy.CallStatic("setCcpaUserConsent", ccpaUserConsent);
-        }
-
-        public bool GetCCPAUserConsent()
-        {
-            AndroidJavaClass bigoPrivacy = new AndroidJavaClass(BIGO_PRIVACY_CLASS_NAME);
-            AndroidJavaObject bigoCurrentPrivacy =
-                    bigoPrivacy.CallStatic<AndroidJavaObject>("currentPrivacy");
-            AndroidJavaObject ccpaUserConsent =
-                    bigoCurrentPrivacy.Get<AndroidJavaObject>("ccpaUserConsent");
-            return ccpaUserConsent.Call<bool>("booleanValue");
-        }
     }
 }
 

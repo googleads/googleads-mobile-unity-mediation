@@ -21,35 +21,11 @@ namespace GoogleMobileAds.Mediation.Bigo.Api
         internal static readonly IBigoClient client =
                 BigoClientFactory.CreateBigoClient();
 
-        public static void SetUserConsent(bool userConsent)
+        public static void SetCoppaConsent(bool consent)
         {
-            client.SetUserConsent(userConsent);
+            client.SetCoppaConsent(consent);
         }
 
-        public static bool GetUserConsent()
-        {
-            return client.GetUserConsent();
-        }
-
-        public static void SetUserAgeRestricted(bool userAgeRestricted)
-        {
-            client.SetUserAgeRestricted(userAgeRestricted);
-        }
-
-        public static bool IsUserAgeRestricted()
-        {
-            return client.IsUserAgeRestricted();
-        }
-
-        public static void SetCCPAUserConsent(bool ccpaUserConsent)
-        {
-            client.SetCCPAUserConsent(ccpaUserConsent);
-        }
-
-        public static bool GetCCPAUserConsent()
-        {
-            return client.GetCCPAUserConsent();
-        }
     }
 }
 
@@ -58,35 +34,10 @@ namespace GoogleMobileAds.Api.Mediation.Bigo
     [System.Obsolete("Use `GoogleMobileAds.Mediation.Bigo.Api.Bigo` instead.")]
     public class Bigo
     {
-        public static void SetUserConsent(bool userConsent)
+        public static void SetCoppaConsent(bool consent)
         {
-            GoogleMobileAds.Mediation.Bigo.Api.Bigo.SetUserConsent(userConsent);
+            GoogleMobileAds.Mediation.Bigo.Api.Bigo.SetCoppaConsent(consent);
         }
 
-        public static bool GetUserConsent()
-        {
-            return GoogleMobileAds.Mediation.Bigo.Api.Bigo.GetUserConsent();
-        }
-
-        public static void SetUserAgeRestricted(bool userAgeRestricted)
-        {
-            GoogleMobileAds.Mediation.Bigo.Api.Bigo
-                    .SetUserAgeRestricted(userAgeRestricted);
-        }
-
-        public static bool IsUserAgeRestricted()
-        {
-            return GoogleMobileAds.Mediation.Bigo.Api.Bigo.IsUserAgeRestricted();
-        }
-
-        public static void SetCCPAUserConsent(bool ccpaUserConsent)
-        {
-            GoogleMobileAds.Mediation.Bigo.Api.Bigo.SetCCPAUserConsent(ccpaUserConsent);
-        }
-
-        public static bool GetCCPAUserConsent()
-        {
-            return GoogleMobileAds.Mediation.Bigo.Api.Bigo.GetCCPAUserConsent();
-        }
     }
 }

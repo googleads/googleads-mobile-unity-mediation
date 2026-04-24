@@ -14,18 +14,8 @@
 
 #import <BigoSDK/BigoSDK.h>
 
-void GADUMBigoSetUserConsent(BOOL userConsent) { [BigoPrivacy setUserConsent:userConsent]; }
 
-BOOL GADUMBigoGetUserConsent() { return [BigoPrivacy currentPrivacy].userConsent; }
-
-void GADUMBigoSetUserAgeRestricted(BOOL userAgeRestricted) {
-  [BigoPrivacy setUserAgeRestricted:userAgeRestricted];
+void GADUMBigoSetCoppaConsent(BOOL consent) {
+  [BigoAdSdk setUserConsentWithOption:BigoConsentOptionsCOPPA consent:consent];
 }
 
-BOOL GADUMBigoIsUserAgeRestricted() { return [BigoPrivacy currentPrivacy].userAgeRestricted; }
-
-void GADUMBigoSetCCPAUserConsent(BOOL ccpaUserConsent) {
-  [BigoPrivacy setCcpaUserConsent:ccpaUserConsent];
-}
-
-BOOL GADUMBigoGetCCPAUserConsent() { return [BigoPrivacy currentPrivacy].ccpaUserConsent; }

@@ -31,35 +31,11 @@ namespace GoogleMobileAds.Mediation.Bigo.iOS
             }
         }
 
-        public void SetUserConsent(bool userConsent)
+        public void SetCoppaConsent(bool consent)
         {
-            Externs.GADUMBigoSetUserConsent(userConsent);
+            Externs.GADUMBigoSetCoppaConsent(consent);
         }
 
-        public bool GetUserConsent()
-        {
-            return Externs.GADUMBigoGetUserConsent();
-        }
-
-        public void SetUserAgeRestricted(bool userAgeRestricted)
-        {
-            Externs.GADUMBigoSetUserAgeRestricted(userAgeRestricted);
-        }
-
-        public bool IsUserAgeRestricted()
-        {
-            return Externs.GADUMBigoIsUserAgeRestricted();
-        }
-
-        public void SetCCPAUserConsent(bool ccpaUserConsent)
-        {
-            Externs.GADUMBigoSetCCPAUserConsent(ccpaUserConsent);
-        }
-
-        public bool GetCCPAUserConsent()
-        {
-            return Externs.GADUMBigoGetCCPAUserConsent();
-        }
     }
 }
 
