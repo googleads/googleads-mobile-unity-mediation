@@ -25,37 +25,10 @@ namespace GoogleMobileAds.Mediation.Bigo.Common
             Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
         }
 
-        public void SetUserConsent(bool userConsent)
+        public void SetCcpaConsent(bool consent)
         {
             Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
         }
 
-        public bool GetUserConsent()
-        {
-            Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
-            return false;
-        }
-
-        public void SetUserAgeRestricted(bool userAgeRestricted)
-        {
-            Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
-        }
-
-        public bool IsUserAgeRestricted()
-        {
-            Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
-            return false;
-        }
-
-        public void SetCCPAUserConsent(bool ccpaUserConsent)
-        {
-            Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
-        }
-
-        public bool GetCCPAUserConsent()
-        {
-            Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
-            return false;
-        }
     }
 }

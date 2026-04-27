@@ -12,20 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import <BigoSDK/BigoSDK.h>
+#import <BigoADS/BigoAdSdk.h>
 
-void GADUMBigoSetUserConsent(BOOL userConsent) { [BigoPrivacy setUserConsent:userConsent]; }
-
-BOOL GADUMBigoGetUserConsent() { return [BigoPrivacy currentPrivacy].userConsent; }
-
-void GADUMBigoSetUserAgeRestricted(BOOL userAgeRestricted) {
-  [BigoPrivacy setUserAgeRestricted:userAgeRestricted];
+void GADUMBigoSetCcpaConsent(BOOL consent) {
+  [BigoAdSdk setUserConsentWithOption:BigoConsentOptionsCCPA consent:consent];
 }
 
-BOOL GADUMBigoIsUserAgeRestricted() { return [BigoPrivacy currentPrivacy].userAgeRestricted; }
-
-void GADUMBigoSetCCPAUserConsent(BOOL ccpaUserConsent) {
-  [BigoPrivacy setCcpaUserConsent:ccpaUserConsent];
-}
-
-BOOL GADUMBigoGetCCPAUserConsent() { return [BigoPrivacy currentPrivacy].ccpaUserConsent; }
