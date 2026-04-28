@@ -16,7 +16,7 @@
 
 <dependencies>
   <androidPackages>
-    <androidPackage spec="com.google.ads.mediation.bigo:5.8.0.0">
+    <androidPackage spec="com.google.ads.mediation:bigo:5.8.0.0">
       <repositories>
         <repository>https://repo.maven.apache.org/maven2/</repository>
         <repository>https://dl.google.com/dl/android/maven2/</repository>
@@ -26,5 +26,6 @@
 
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationBigo" version="5.1.2.0"/>
+    <iosPod name="BigoADS" addToAllTargets="true" />
   </iosPods>
 </dependencies>
