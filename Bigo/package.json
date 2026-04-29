@@ -13,7 +13,7 @@
     "name": "Google LLC",
     "url": "https://github.com/googleads/googleads-mobile-unity-mediation"
   },
-  "description": "The Google Mobile Ads mediation plugin for bigo package allows you to load and display ads from bigo using mediation, covering waterfall integrations.",
+  "description": "The Google Mobile Ads mediation plugin for bigo package allows you to load and display ads from BIGO Ads using mediation, covering waterfall integrations.",
   "unity": "2019.4",
   "dependencies": {
     "com.google.ads.mobile": "11.0.0"
