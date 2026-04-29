@@ -1,6 +1,6 @@
 ## Meta Audience Network Unity Mediation Plugin Changelog
 
-#### Next version
+#### Version 3.18.5 (In progress)
 
 - Added support to include Meta SDK iOS dynamic framework for all targets.
 
