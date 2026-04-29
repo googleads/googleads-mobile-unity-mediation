@@ -26,5 +26,6 @@
 
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationFacebook" version="6.21.1.0"/>
+    <iosPod name="FBAudienceNetwork" addToAllTargets="true"/>
   </iosPods>
 </dependencies>
