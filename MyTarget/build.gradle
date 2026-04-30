@@ -31,11 +31,12 @@ project.ext {
     exportPath = file(pluginFileName).absolutePath
 }
 
-// Build unity package using through command line interface.
-// Create new unity project with files in temporary build directory and export files to a unity package.
+// Build Unity package using through command line interface.
+// Create new Unity project with files in temporary build directory and export
+// files to a Unity package.
 // Command line usage and arguments documented at http://docs.unity3d.com/Manual/CommandLineArguments.html.
 task exportPackage(type: Exec) {
-    description = "Creates and exports the Plugin unity package"
+    description = "Creates and exports the Plugin Unity package"
     executable "${unity_exe}"
     args "-g.building",
             "-batchmode",
@@ -81,7 +82,8 @@ task clearZip(type: Delete) {
 }
 
 /**
- * Zip task to make a zip archive. This task depends on exportPackage and clearZip tasks.
+ * Zip task to make a zip archive. This task depends on exportPackage and
+ * clearZip tasks.
  */
 task makeZip(type: Zip) {
     // Targets to be added to the zip archive.
@@ -97,3 +99,27 @@ task makeZip(type: Zip) {
 
 makeZip.dependsOn([clearZip, exportPackage])
 makeZip.mustRunAfter([clearZip, exportPackage])
+
+/**
+ * Tar task to package the Unity Package Manager (UPM) artifact.
+ */
+task makeUpmTar(type: Tar) {
+    description = 'Creates a UPM .tgz package for the adapter'
+
+    // Example: `com.google.ads.mobile.mediation.mytarget-3.36.0.tgz`.
+    archiveBaseName = "com.google.ads.mobile.mediation.${adapterName.toLowerCase()}"
+    archiveVersion = versionString
+    archiveExtension = 'tgz'
+    destinationDirectory = file('.')
+    compression = Compression.GZIP
+
+    into('package') {
+        from('.') {
+            include 'package.json', 'package.json.meta'
+            include 'README.md', 'README.md.meta'
+            include 'CHANGELOG.md', 'CHANGELOG.md.meta'
+            include 'LICENSE', 'LICENSE.meta'
+            include 'source/**', 'source.meta'
+        }
+    }
+}
