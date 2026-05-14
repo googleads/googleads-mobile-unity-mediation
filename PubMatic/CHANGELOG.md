@@ -1,6 +1,9 @@
 ## PubMatic Unity Mediation Plugin Changelog
 
-#### Version 2.1.0 (In progress)
+#### [Version 2.1.0](https://dl.google.com/googleadmobadssdk/mediation/unity/pubmatic/PubMaticUnityAdapter-2.1.0.zip)
+- Supports [PubMatic Android adapter version 5.1.0.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/pubmatic/CHANGELOG.md#version-5100).
+- Supports [PubMatic iOS adapter version 5.1.0.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/PubMatic/CHANGELOG.md#version-5100).
+- Built and tested with the Google Mobile Ads Unity Plugin version 11.0.0.
 
 #### [Version 2.0.1](https://dl.google.com/googleadmobadssdk/mediation/unity/pubmatic/PubMaticUnityAdapter-2.0.1.zip)
 - Updated the plugin to include `OpenWrapSDK` dynamic framework for all iOS targets.
