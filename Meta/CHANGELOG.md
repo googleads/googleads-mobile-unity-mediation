@@ -1,5 +1,7 @@
 ## Meta Audience Network Unity Mediation Plugin Changelog
 
+#### Version 3.18.6 (In progress)
+
 #### [Version 3.18.5](https://dl.google.com/googleadmobadssdk/mediation/unity/meta/MetaAudienceNetworkUnityAdapter-3.18.5.zip)
 - Updated the plugin to include `FBAudienceNetwork` dynamic framework for all iOS targets.
 - Supports [Meta Audience Network Android adapter version 6.21.0.2](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/meta/CHANGELOG.md#version-62102).
