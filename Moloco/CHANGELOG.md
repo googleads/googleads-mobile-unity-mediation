@@ -1,6 +1,9 @@
 ## Moloco Unity Mediation Plugin Changelog
 
-#### Version 3.6.1 (In progress)
+#### [Version 3.6.1](https://dl.google.com/googleadmobadssdk/mediation/unity/moloco/MolocoUnityAdapter-3.6.1.zip)
+- Supports [Moloco Android adapter version 4.8.1.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/moloco/CHANGELOG.md#version-4810).
+- Supports [Moloco iOS adapter version 4.6.1.1](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Moloco/CHANGELOG.md#version-4611).
+- Built and tested with the Google Mobile Ads Unity Plugin version 11.1.0.
 
 #### [Version 3.6.0](https://dl.google.com/googleadmobadssdk/mediation/unity/moloco/MolocoUnityAdapter-3.6.0.zip)
 - Supports [Moloco Android adapter version 4.8.0.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/moloco/CHANGELOG.md#version-4800).
