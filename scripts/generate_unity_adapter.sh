@@ -181,14 +181,9 @@ cp "${template_adapter_dir}/package.json" "${new_adapter_dir}/package.json"
 cp "${template_adapter_dir}/METADATA" "${new_adapter_dir}/METADATA"
 cp "${template_adapter_dir}/rapid.blueprint" "${new_adapter_dir}/rapid.blueprint"
 
-# .meta files for root
-cp "${adapter_root_dir}/MyTarget/LICENSE.meta" "${new_adapter_dir}/LICENSE.meta"
-cp "${template_adapter_dir}/README.md.meta" "${new_adapter_dir}/README.md.meta"
-cp "${template_adapter_dir}/CHANGELOG.md.meta" "${new_adapter_dir}/CHANGELOG.md.meta"
-cp "${template_adapter_dir}/build.gradle.meta" "${new_adapter_dir}/build.gradle.meta"
-cp "${template_adapter_dir}/package.json.meta" "${new_adapter_dir}/package.json.meta"
-cp "${template_adapter_dir}/source.meta" "${new_adapter_dir}/source.meta"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget.meta" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}.meta"
+# (Removed copying template .meta files directly to prevent duplicate GUID conflicts.
+# They are now generated dynamically with path-based stable GUIDs in Step 5.)
+
 
 # C# API and Common
 cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Api/MyTarget.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}.cs"
@@ -357,9 +352,25 @@ if [[ "$with_extras" == true ]]; then
     {} +
 fi
 
-# 5) Generate .meta files for source directory
-echo "Generating .meta files for source/..."
-blaze run --config=darwin_arm64 //third_party/library_wrapper/release_tools/unity:unity_metadata_generator -- -r -x -i "${new_adapter_dir}/source/"
+# 5) Generate .meta files with unique, stable path-based GUIDs
+echo "Generating .meta files with unique stable GUIDs..."
+
+# Clean up any existing .meta files copied from the templates to ensure GUID freshness
+find "${new_adapter_dir}" -name "*.meta" -type f -delete
+
+
+# Generate stable GUIDs for root files and directories
+blaze run --config=darwin_arm64 //third_party/library_wrapper/release_tools/unity:unity_metadata_generator -- -s \
+  -i "${new_adapter_dir}/LICENSE" \
+  -i "${new_adapter_dir}/README.md" \
+  -i "${new_adapter_dir}/CHANGELOG.md" \
+  -i "${new_adapter_dir}/build.gradle" \
+  -i "${new_adapter_dir}/package.json" \
+  -i "${new_adapter_dir}/source" \
+  -i "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}"
+
+# Generate stable GUIDs recursively for the source directory
+blaze run --config=darwin_arm64 //third_party/library_wrapper/release_tools/unity:unity_metadata_generator -- -r -x -s -i "${new_adapter_dir}/source/"
 
 echo "Done! New adapter structure created at ${new_adapter_dir}"
 echo ""
