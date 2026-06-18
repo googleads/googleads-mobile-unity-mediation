@@ -106,7 +106,7 @@ makeZip.mustRunAfter([clearZip, exportPackage])
 task makeUpmTar(type: Tar) {
     description = 'Creates a UPM .tgz package for the adapter'
 
-    // Example: `com.google.ads.mobile.mediation.mytarget-3.36.0.tgz`.
+    // Example: `com.google.ads.mobile.mediation.mytarget-3.38.0.tgz`.
     archiveBaseName = "com.google.ads.mobile.mediation.${adapterName.toLowerCase()}"
     archiveVersion = versionString
     archiveExtension = 'tgz'

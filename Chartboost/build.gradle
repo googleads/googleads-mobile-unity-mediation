@@ -98,3 +98,27 @@ task makeZip(type: Zip) {
 
 makeZip.dependsOn([clearZip, exportPackage])
 makeZip.mustRunAfter([clearZip, exportPackage])
+
+/**
+ * Tar task to package the Unity Package Manager (UPM) artifact.
+ */
+task makeUpmTar(type: Tar) {
+    description = 'Creates a UPM .tgz package for the adapter'
+
+    // Example: `com.google.ads.mobile.mediation.chartboost-4.12.1.tgz`.
+    archiveBaseName = "com.google.ads.mobile.mediation.${adapterName.toLowerCase()}"
+    archiveVersion = versionString
+    archiveExtension = 'tgz'
+    destinationDirectory = file('.')
+    compression = Compression.GZIP
+
+    into('package') {
+        from('.') {
+            include 'package.json', 'package.json.meta'
+            include 'README.md', 'README.md.meta'
+            include 'CHANGELOG.md', 'CHANGELOG.md.meta'
+            include 'LICENSE', 'LICENSE.meta'
+            include 'source/**', 'source.meta'
+        }
+    }
+}
