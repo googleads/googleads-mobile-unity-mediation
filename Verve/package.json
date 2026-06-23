@@ -1,19 +1,19 @@
 {
   "name": "com.google.ads.mobile.mediation.verve",
-  "version": "3.38.0",
-  "displayName": "Google Mobile Ads verve Mediation",
+  "version": "1.0.0",
+  "displayName": "Google Mobile Ads Verve Mediation",
   "keywords": [
     "Google",
     "Mobile",
     "Ads",
     "vh-name:GoogleMobileAdsMediationVerve",
-    "vh-name:Google Mobile Ads verve Mediation"
+    "vh-name:Google Mobile Ads Verve Mediation"
   ],
   "author": {
     "name": "Google LLC",
     "url": "https://github.com/googleads/googleads-mobile-unity-mediation"
   },
-  "description": "The Google Mobile Ads mediation plugin for verve package allows you to load and display ads from verve using mediation, covering waterfall integrations.",
+  "description": "The Google Mobile Ads mediation plugin for Verve package allows you to load and display ads from Verve using mediation, covering waterfall integrations.",
   "unity": "2019.4",
   "dependencies": {
     "com.google.ads.mobile": "11.2.0"

@@ -1,8 +1,8 @@
 {
-    "name": "GoogleMobileAds.Mediation.MyTarget.Android",
+    "name": "GoogleMobileAds.Mediation.Verve.Android",
     "rootNamespace": "",
     "references": [
-        "GoogleMobileAds.Mediation.MyTarget.Common"
+        "GoogleMobileAds.Mediation.Verve.Common"
     ],
     "includePlatforms": [
         "Android",

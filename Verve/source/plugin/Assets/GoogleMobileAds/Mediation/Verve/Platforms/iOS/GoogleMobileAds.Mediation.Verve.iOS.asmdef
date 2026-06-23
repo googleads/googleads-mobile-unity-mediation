@@ -1,8 +1,8 @@
 {
-    "name": "GoogleMobileAds.Mediation.MyTarget.iOS",
+    "name": "GoogleMobileAds.Mediation.Verve.iOS",
     "rootNamespace": "",
     "references": [
-        "GoogleMobileAds.Mediation.MyTarget.Common"
+        "GoogleMobileAds.Mediation.Verve.Common"
     ],
     "includePlatforms": [
         "Editor",

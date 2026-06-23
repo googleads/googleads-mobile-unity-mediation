@@ -1,10 +1,10 @@
 {
-    "name": "GoogleMobileAds.Mediation.MyTarget.Api",
+    "name": "GoogleMobileAds.Mediation.Verve.Api",
     "rootNamespace": "",
     "references": [
         "GoogleMobileAds.Api.Mediation",
-        "GoogleMobileAds.Mediation.MyTarget.Common",
-        "GoogleMobileAds.Mediation.MyTarget.Mediation"
+        "GoogleMobileAds.Mediation.Verve.Common",
+        "GoogleMobileAds.Mediation.Verve.Mediation"
     ],
     "references": [],
     "includePlatforms": [],
