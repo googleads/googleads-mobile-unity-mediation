@@ -20,11 +20,13 @@
       <repositories>
         <repository>https://repo.maven.apache.org/maven2/</repository>
         <repository>https://dl.google.com/dl/android/maven2/</repository>
+        <repository>https://verve.jfrog.io/artifactory/verve-gradle-release</repository>
       </repositories>
     </androidPackage>
   </androidPackages>
 
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationVerve" version="3.8.1.1"/>
+    <iosPod name="HyBid" addToAllTargets="true"/>
   </iosPods>
 </dependencies>
