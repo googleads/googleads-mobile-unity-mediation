@@ -25,8 +25,6 @@ namespace GoogleMobileAds.Mediation.Verve.Android
         private static VerveClient instance = new VerveClient();
         private VerveClient() {}
 
-        private const string VERVE_PRIVACY_CLASS_NAME = "com.my.target.common.VervePrivacy";
-
         public static VerveClient Instance
         {
             get
@@ -35,50 +33,11 @@ namespace GoogleMobileAds.Mediation.Verve.Android
             }
         }
 
-        public void SetUserConsent(bool userConsent)
+        public void SetIABUSPrivacyString(string iabUSPrivacyString)
         {
-            AndroidJavaClass vervePrivacy = new AndroidJavaClass(VERVE_PRIVACY_CLASS_NAME);
-            vervePrivacy.CallStatic("setUserConsent", userConsent);
-        }
-
-        public bool GetUserConsent()
-        {
-            AndroidJavaClass vervePrivacy = new AndroidJavaClass(VERVE_PRIVACY_CLASS_NAME);
-            AndroidJavaObject verveCurrentPrivacy =
-                    vervePrivacy.CallStatic<AndroidJavaObject>("currentPrivacy");
-            AndroidJavaObject userConsent =
-                    verveCurrentPrivacy.Get<AndroidJavaObject>("userConsent");
-            return userConsent.Call<bool>("booleanValue");
-        }
-
-        public void SetUserAgeRestricted(bool userAgeRestricted)
-        {
-            AndroidJavaClass vervePrivacy = new AndroidJavaClass(VERVE_PRIVACY_CLASS_NAME);
-            vervePrivacy.CallStatic("setUserAgeRestricted", userAgeRestricted);
-        }
-
-        public bool IsUserAgeRestricted()
-        {
-            AndroidJavaClass vervePrivacy = new AndroidJavaClass(VERVE_PRIVACY_CLASS_NAME);
-            AndroidJavaObject verveCurrentPrivacy =
-                    vervePrivacy.CallStatic<AndroidJavaObject>("currentPrivacy");
-            return verveCurrentPrivacy.Get<bool>("userAgeRestricted");
-        }
-
-        public void SetCCPAUserConsent(bool ccpaUserConsent)
-        {
-            AndroidJavaClass vervePrivacy = new AndroidJavaClass(VERVE_PRIVACY_CLASS_NAME);
-            vervePrivacy.CallStatic("setCcpaUserConsent", ccpaUserConsent);
-        }
-
-        public bool GetCCPAUserConsent()
-        {
-            AndroidJavaClass vervePrivacy = new AndroidJavaClass(VERVE_PRIVACY_CLASS_NAME);
-            AndroidJavaObject verveCurrentPrivacy =
-                    vervePrivacy.CallStatic<AndroidJavaObject>("currentPrivacy");
-            AndroidJavaObject ccpaUserConsent =
-                    verveCurrentPrivacy.Get<AndroidJavaObject>("ccpaUserConsent");
-            return ccpaUserConsent.Call<bool>("booleanValue");
+            AndroidJavaClass hybid = new AndroidJavaClass("net.pubnative.lite.sdk.HyBid");
+            AndroidJavaObject userDataManager = hybid.CallStatic<AndroidJavaObject>("getUserDataManager");
+            userDataManager.Call("setIABUSPrivacyString", iabUSPrivacyString);
         }
     }
 }

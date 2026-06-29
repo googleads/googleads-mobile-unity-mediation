@@ -31,34 +31,9 @@ namespace GoogleMobileAds.Mediation.Verve.iOS
             }
         }
 
-        public void SetUserConsent(bool userConsent)
+        public void SetIABUSPrivacyString(string iabUSPrivacyString)
         {
-            Externs.GADUMVerveSetUserConsent(userConsent);
-        }
-
-        public bool GetUserConsent()
-        {
-            return Externs.GADUMVerveGetUserConsent();
-        }
-
-        public void SetUserAgeRestricted(bool userAgeRestricted)
-        {
-            Externs.GADUMVerveSetUserAgeRestricted(userAgeRestricted);
-        }
-
-        public bool IsUserAgeRestricted()
-        {
-            return Externs.GADUMVerveIsUserAgeRestricted();
-        }
-
-        public void SetCCPAUserConsent(bool ccpaUserConsent)
-        {
-            Externs.GADUMVerveSetCCPAUserConsent(ccpaUserConsent);
-        }
-
-        public bool GetCCPAUserConsent()
-        {
-            return Externs.GADUMVerveGetCCPAUserConsent();
+            Externs.GADUMVerveSetIABUSPrivacyString(iabUSPrivacyString);
         }
     }
 }

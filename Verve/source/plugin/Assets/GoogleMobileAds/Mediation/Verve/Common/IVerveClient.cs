@@ -16,11 +16,6 @@ namespace GoogleMobileAds.Mediation.Verve.Common
 {
     public interface IVerveClient
     {
-        void SetUserConsent(bool userConsent);
-        bool GetUserConsent();
-        void SetUserAgeRestricted(bool userAgeRestricted);
-        bool IsUserAgeRestricted();
-        void SetCCPAUserConsent(bool ccpaUserConsent);
-        bool GetCCPAUserConsent();
+        void SetIABUSPrivacyString(string iabUSPrivacyString);
     }
 }

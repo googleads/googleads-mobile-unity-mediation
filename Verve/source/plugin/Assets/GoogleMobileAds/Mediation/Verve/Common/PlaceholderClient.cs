@@ -25,37 +25,10 @@ namespace GoogleMobileAds.Mediation.Verve.Common
             Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
         }
 
-        public void SetUserConsent(bool userConsent)
-        {
-            Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
-        }
 
-        public bool GetUserConsent()
+        public void SetIABUSPrivacyString(string iabUSPrivacyString)
         {
             Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
-            return false;
-        }
-
-        public void SetUserAgeRestricted(bool userAgeRestricted)
-        {
-            Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
-        }
-
-        public bool IsUserAgeRestricted()
-        {
-            Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
-            return false;
-        }
-
-        public void SetCCPAUserConsent(bool ccpaUserConsent)
-        {
-            Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
-        }
-
-        public bool GetCCPAUserConsent()
-        {
-            Debug.Log ("Placeholder " + MethodBase.GetCurrentMethod().Name);
-            return false;
         }
     }
 }

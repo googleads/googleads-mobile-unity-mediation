@@ -12,20 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import <VerveSDK/VerveSDK.h>
+#import <HyBid/HyBid.h>
 
-void GADUMVerveSetUserConsent(BOOL userConsent) { [VervePrivacy setUserConsent:userConsent]; }
-
-BOOL GADUMVerveGetUserConsent() { return [VervePrivacy currentPrivacy].userConsent; }
-
-void GADUMVerveSetUserAgeRestricted(BOOL userAgeRestricted) {
-  [VervePrivacy setUserAgeRestricted:userAgeRestricted];
+void GADUMVerveSetIABUSPrivacyString(const char *iabUSPrivacyString) {
+  [[HyBidUserDataManager sharedInstance] setIABUSPrivacyString:
+      iabUSPrivacyString ? [NSString stringWithUTF8String:iabUSPrivacyString] : nil];
 }
-
-BOOL GADUMVerveIsUserAgeRestricted() { return [VervePrivacy currentPrivacy].userAgeRestricted; }
-
-void GADUMVerveSetCCPAUserConsent(BOOL ccpaUserConsent) {
-  [VervePrivacy setCcpaUserConsent:ccpaUserConsent];
-}
-
-BOOL GADUMVerveGetCCPAUserConsent() { return [VervePrivacy currentPrivacy].ccpaUserConsent; }

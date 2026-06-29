@@ -21,72 +21,9 @@ namespace GoogleMobileAds.Mediation.Verve.Api
         internal static readonly IVerveClient client =
                 VerveClientFactory.CreateVerveClient();
 
-        public static void SetUserConsent(bool userConsent)
+        public static void SetIABUSPrivacyString(string iabUSPrivacyString)
         {
-            client.SetUserConsent(userConsent);
-        }
-
-        public static bool GetUserConsent()
-        {
-            return client.GetUserConsent();
-        }
-
-        public static void SetUserAgeRestricted(bool userAgeRestricted)
-        {
-            client.SetUserAgeRestricted(userAgeRestricted);
-        }
-
-        public static bool IsUserAgeRestricted()
-        {
-            return client.IsUserAgeRestricted();
-        }
-
-        public static void SetCCPAUserConsent(bool ccpaUserConsent)
-        {
-            client.SetCCPAUserConsent(ccpaUserConsent);
-        }
-
-        public static bool GetCCPAUserConsent()
-        {
-            return client.GetCCPAUserConsent();
-        }
-    }
-}
-
-namespace GoogleMobileAds.Api.Mediation.Verve
-{
-    [System.Obsolete("Use `GoogleMobileAds.Mediation.Verve.Api.Verve` instead.")]
-    public class Verve
-    {
-        public static void SetUserConsent(bool userConsent)
-        {
-            GoogleMobileAds.Mediation.Verve.Api.Verve.SetUserConsent(userConsent);
-        }
-
-        public static bool GetUserConsent()
-        {
-            return GoogleMobileAds.Mediation.Verve.Api.Verve.GetUserConsent();
-        }
-
-        public static void SetUserAgeRestricted(bool userAgeRestricted)
-        {
-            GoogleMobileAds.Mediation.Verve.Api.Verve
-                    .SetUserAgeRestricted(userAgeRestricted);
-        }
-
-        public static bool IsUserAgeRestricted()
-        {
-            return GoogleMobileAds.Mediation.Verve.Api.Verve.IsUserAgeRestricted();
-        }
-
-        public static void SetCCPAUserConsent(bool ccpaUserConsent)
-        {
-            GoogleMobileAds.Mediation.Verve.Api.Verve.SetCCPAUserConsent(ccpaUserConsent);
-        }
-
-        public static bool GetCCPAUserConsent()
-        {
-            return GoogleMobileAds.Mediation.Verve.Api.Verve.GetCCPAUserConsent();
+            client.SetIABUSPrivacyString(iabUSPrivacyString);
         }
     }
 }

@@ -22,22 +22,7 @@ namespace GoogleMobileAds.Mediation.Verve.iOS
     internal class Externs
     {
         [DllImport("__Internal")]
-        internal static extern void GADUMVerveSetUserConsent(bool userConsent);
-
-        [DllImport("__Internal")]
-        internal static extern bool GADUMVerveGetUserConsent();
-
-        [DllImport("__Internal")]
-        internal static extern void GADUMVerveSetUserAgeRestricted(bool userAgeRestricted);
-
-        [DllImport("__Internal")]
-        internal static extern bool GADUMVerveIsUserAgeRestricted();
-
-        [DllImport("__Internal")]
-        internal static extern void GADUMVerveSetCCPAUserConsent(bool ccpaUserConsent);
-
-        [DllImport("__Internal")]
-        internal static extern bool GADUMVerveGetCCPAUserConsent();
+        internal static extern void GADUMVerveSetIABUSPrivacyString(string iabUSPrivacyString);
     }
 }
 
