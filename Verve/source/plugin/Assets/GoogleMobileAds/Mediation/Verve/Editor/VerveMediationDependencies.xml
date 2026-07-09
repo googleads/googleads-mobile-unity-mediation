@@ -26,7 +26,7 @@
   </androidPackages>
 
   <iosPods>
-    <iosPod name="GoogleMobileAdsMediationVerve" version="3.8.1.1"/>
+    <iosPod name="GoogleMobileAdsMediationVerve" version="3.8.1.1.1"/>
     <iosPod name="HyBid" addToAllTargets="true"/>
   </iosPods>
 </dependencies>
