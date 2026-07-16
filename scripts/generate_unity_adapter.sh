@@ -99,7 +99,7 @@ plugin_name="GoogleMobileAds${adapter_name}Mediation"
 # Assuming the script is in google3/third_party/unity/gma_sdk_mediation/scripts/
 SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 adapter_root_dir="$(dirname "${SCRIPT_DIR}")"
-template_adapter_dir="${adapter_root_dir}/MyTarget" # Using MyTarget as a base template
+template_adapter_dir="${adapter_root_dir}/Verve" # Using Verve as a base template
 extras_template_dir="${adapter_root_dir}/LiftoffMonetize" # Template for extras
 new_adapter_dir="${adapter_root_dir}/${adapter_name}"
 
@@ -186,30 +186,30 @@ cp "${template_adapter_dir}/rapid.blueprint" "${new_adapter_dir}/rapid.blueprint
 
 
 # C# API and Common
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Api/MyTarget.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}.cs"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Common/IMyTargetClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/I${adapter_name}Client.cs"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Common/PlaceholderClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/PlaceholderClient.cs"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Api/Verve.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}.cs"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Common/IVerveClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/I${adapter_name}Client.cs"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Common/PlaceholderClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/PlaceholderClient.cs"
 
 # C# Platform Factories
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Mediation/MyTargetClientFactory.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Mediation/${adapter_name}ClientFactory.cs"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Platforms/Mediation/VerveClientFactory.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Mediation/${adapter_name}ClientFactory.cs"
 
 # C# Android Platform
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Android/MyTargetClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Android/${adapter_name}Client.cs"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Platforms/Android/VerveClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Android/${adapter_name}Client.cs"
 
 # C# iOS Platform
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/iOS/MyTargetClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/${adapter_name}Client.cs"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/iOS/Externs.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/Externs.cs"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Plugins/iOS/GADUMMyTargetInterface.m" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Plugins/iOS/GADUM${adapter_name}Interface.m"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Platforms/iOS/VerveClient.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/${adapter_name}Client.cs"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Platforms/iOS/Externs.cs" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/Externs.cs"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Plugins/iOS/GADUMVerveInterface.m" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Plugins/iOS/GADUM${adapter_name}Interface.m"
 
 # Mediation Dependencies XML
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Editor/MyTargetMediationDependencies.xml" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Editor/${adapter_name}MediationDependencies.xml"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Editor/VerveMediationDependencies.xml" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Editor/${adapter_name}MediationDependencies.xml"
 
 # ASMDEF files
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Api/Api.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/GoogleMobileAds.Mediation.${adapter_name}.Api.asmdef"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Common/Common.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/GoogleMobileAds.Mediation.${adapter_name}.Common.asmdef"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Android/Android.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Android/GoogleMobileAds.Mediation.${adapter_name}.Android.asmdef"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/iOS/iOS.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/GoogleMobileAds.Mediation.${adapter_name}.iOS.asmdef"
-cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/MyTarget/Platforms/Mediation/Mediation.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Mediation/GoogleMobileAds.Mediation.${adapter_name}.Mediation.asmdef"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Api/GoogleMobileAds.Mediation.Verve.Api.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/GoogleMobileAds.Mediation.${adapter_name}.Api.asmdef"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Common/GoogleMobileAds.Mediation.Verve.Common.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/GoogleMobileAds.Mediation.${adapter_name}.Common.asmdef"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Platforms/Android/GoogleMobileAds.Mediation.Verve.Android.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Android/GoogleMobileAds.Mediation.${adapter_name}.Android.asmdef"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Platforms/iOS/GoogleMobileAds.Mediation.Verve.iOS.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/GoogleMobileAds.Mediation.${adapter_name}.iOS.asmdef"
+cp "${template_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/Verve/Platforms/Mediation/GoogleMobileAds.Mediation.Verve.Mediation.asmdef" "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Mediation/GoogleMobileAds.Mediation.${adapter_name}.Mediation.asmdef"
 
 # Optional: Copy Extras templates if -with_extras is used
 if [[ "$with_extras" == true ]]; then
@@ -251,16 +251,16 @@ find "${new_adapter_dir}" -type f -exec bash -c 'make_writable "$0"' {} \;
 # Now perform the sed replacements
 echo "Performing text replacements..."
 find "${new_adapter_dir}" -type f \( -name "*.md" -o -name "*.cs" -o -name "*.xml" -o -name "*.gradle" -o -name "*.json" -o -name "*.blueprint" -o -name "*.m" -o -name "*.h" -o -name "*.java" -o -name "*.properties" -o -name "*.pgcfg" \) -exec sed -i '' \
-  -e "s/MyTarget/${adapter_name}/g" \
-  -e "s/myTarget/${adapter_name_lower_cased}/g" \
-  -e "s/MYTARGET/${adapter_name_upper_cased}/g" \
+  -e "s/Verve/${adapter_name}/g" \
+  -e "s/verve/${adapter_name_lower_cased}/g" \
+  -e "s/VERVE/${adapter_name_upper_cased}/g" \
   -e "s/LiftoffMonetize/${adapter_name}/g" \
   -e "s/liftoffmonetize/${adapter_name_lower_cased}/g" \
   -e "s/Vungle/${adapter_name}/g" \
   -e "s/vungle/${adapter_name_lower_cased}/g" \
-  -e "s/GoogleMobileAdsMyTargetMediation/${plugin_name}/g" \
-  -e "s/\"version\": \"3.35.0\"/\"version\": \"${version}\"/g" \
-  -e "s/versionString = '3.35.0'/versionString = '${version}'/g" \
+  -e "s/GoogleMobileAdsVerveMediation/${plugin_name}/g" \
+  -e "s/\"version\": \"1.0.0\"/\"version\": \"${version}\"/g" \
+  -e "s/versionString = '1.0.0'/versionString = '${version}'/g" \
   -e "s/Copyright 2017 Google LLC/Copyright ${year} Google LLC/g" \
   -e "s/Copyright 2018 Google LLC/Copyright ${year} Google LLC/g" \
   -e "s/Copyright 2019 Google LLC/Copyright ${year} Google LLC/g" \
@@ -268,30 +268,17 @@ find "${new_adapter_dir}" -type f \( -name "*.md" -o -name "*.cs" -o -name "*.xm
   -e "s/Copyright 2023 Google LLC/Copyright ${year} Google LLC/g" \
   -e "s/Copyright 2024 Google LLC/Copyright ${year} Google LLC/g" \
   -e "s/Copyright 2025 Google LLC/Copyright ${year} Google LLC/g" \
-  -e "s/com.google.ads.mobile\": \"11.0.0\"/com.google.ads.mobile\": \"${unity_version}\"/g" \
-  -e "s/GoogleMobileAdsMediationMyTarget\" version=\"5.40.0.0\"/${ios_pod_name}\" version=\"${ios_adapter_version}\"/g" \
-  -e "s/com.google.ads.mediation:mytarget:5.45.3.0/${android_package_name}:${android_adapter_version}/g" \
-  -e "s/value: 'MyTarget'/value: '${adapter_name}'/g" \
-  -e "s/blueprint_file = ::Rapid::BlueprintFile(\"\/\/depot\/google3\/third_party\/unity\/gma_sdk_mediation\/MyTarget\/...\", \"MyTarget\")/blueprint_file = ::Rapid::BlueprintFile(\"\/\/depot\/google3\/third_party\/unity\/gma_sdk_mediation\/${adapter_name}\/...\", \"${adapter_name}\")/g" \
-  -e "s/myTarget Adapter Integration Guide/${adapter_name} Adapter Integration Guide/g" \
-  -e "s/mediation\/myTarget/mediation\/${adapter_name_lower_cased}/g" \
-  -e "s/mytarget#mytarget-unity-mediation-plugin-changelog/${adapter_name_lower_cased}#${adapter_name_lower_cased}-unity-mediation-plugin-changelog/g" \
-  -e "s/myTarget Unity Mediation Plugin Changelog/${adapter_name} Unity Mediation Plugin Changelog/g" \
-  -e "s/MyTargetUnityAdapter-3.35.0.zip/${adapter_name}UnityAdapter-${version}.zip/g" \
-  -e "s/Built and tested with the Google Mobile Ads Unity Plugin version 11.0.0./Built and tested with the Google Mobile Ads Unity Plugin version ${unity_version}./g" \
-  -e "s/com.google.ads.mobile.mediation.mytarget/com.google.ads.mobile.mediation.${adapter_name_lower_cased}/g" \
-  -e "s/Google Mobile Ads myTarget Mediation/Google Mobile Ads ${adapter_name} Mediation/g" \
-  -e "s/vh-name:GoogleMobileAdsMediationMyTarget/vh-name:${ios_pod_name}/g" \
-  -e "s/vh-name:Google Mobile Ads myTarget Mediation/vh-name:Google Mobile Ads ${adapter_name} Mediation/g" \
-  -e "s/mediation plugin for myTarget package/mediation plugin for ${adapter_name} package/g" \
-  -e "s/add myTarget mediation support/add ${adapter_name} mediation support/g" \
-  -e "s/adapterName = 'MyTarget'/adapterName = '${adapter_name}'/g" \
-  -e "s/BuildMyTargetUnity/Build${adapter_name}Unity/g" \
-  -e "s/GADUMMyTarget/GADUM${adapter_name}/g" \
-  -e "s/<MyTargetSDK\/MyTargetSDK.h>/<${adapter_name}SDK\/${adapter_name}SDK.h>/g" \
-  -e "s/MTRGPrivacy/${adapter_name}Privacy/g" \
-  -e "s/GoogleMobileAds.Mediation.MyTarget/GoogleMobileAds.Mediation.${adapter_name}/g" \
-  -e "s/com.google.unity.mediation.mytarget/com.google.unity.mediation.${adapter_name_lower_cased}/g" \
+  -e "s/Copyright 2026 Google LLC/Copyright ${year} Google LLC/g" \
+  -e "s/com.google.ads.mobile\": \"11.2.0\"/com.google.ads.mobile\": \"${unity_version}\"/g" \
+  -e "s/GoogleMobileAdsMediationVerve\" version=\"3.8.1.1\"/${ios_pod_name}\" version=\"${ios_adapter_version}\"/g" \
+  -e "s/com.google.ads.mediation:verve:3.8.2.0/${android_package_name}:${android_adapter_version}/g" \
+  -e "s/value: 'Verve'/value: '${adapter_name}'/g" \
+  -e "s/verve Adapter Integration Guide/${adapter_name} Adapter Integration Guide/g" \
+  -e "s/vh-name:GoogleMobileAdsMediationVerve/vh-name:${ios_pod_name}/g" \
+  -e "s/adapterName = 'Verve'/adapterName = '${adapter_name}'/g" \
+  -e "s/BuildVerveUnity/Build${adapter_name}Unity/g" \
+  -e "s/GADUMVerve/GADUM${adapter_name}/g" \
+  -e "s/add verve mediation support/add ${adapter_name} mediation support/g" \
   {} +
 
 # Additional replacements for -with_extras
@@ -392,13 +379,13 @@ echo "    -   Add any additional \`iosPod\` entries if required (e.g., for the c
 echo ""
 echo "4.  **C# Implementation Files:**"
 echo "    -   **${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/I${adapter_name}Client.cs:** Define the interface methods that your Unity plugin will expose to interact with the native ${adapter_name} SDKs."
-echo "    -   **${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Android/${adapter_name}Client.cs:** Implement the \`I${adapter_name}Client\` interface for Android. **CRITICAL:** Update AndroidJavaClass names (e.g., \`com.my.target.common.MyTargetPrivacy\`) to the correct ${adapter_name} SDK classes and method calls."
+echo "    -   **${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/Android/${adapter_name}Client.cs:** Implement the \`I${adapter_name}Client\` interface for Android. **CRITICAL:** Update AndroidJavaClass names (e.g., \`net.pubnative.lite.sdk.HyBid\`) to the correct ${adapter_name} SDK classes and method calls."
 echo "    -   **${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/${adapter_name}Client.cs:** Implement the \`I${adapter_name}Client\` interface for iOS, using \`Externs\`. Update method calls to match your native iOS implementation."
-echo "    -   **${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/Externs.cs:** Declare the \`[DllImport(\"__Internal\")]\` methods. Update method names (e.g., \`GADUMMyTargetSetUserConsent\` to \`GADUM${adapter_name}SetUserConsent\`)."
+echo "    -   **${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Platforms/iOS/Externs.cs:** Declare the \`[DllImport(\"__Internal\")]\` methods. Update method names (e.g., \`GADUMVerveSetIABUSPrivacyString\` to \`GADUM${adapter_name}SetIABUSPrivacyString\`)."
 echo "    -   **${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Api/${adapter_name}.cs:** Implement the public API, calling the \`client\` methods."
 echo ""
 echo "5.  **Native Platform Files:**"
-echo "    -   **iOS:** Create Objective-C (\`.m\`) or Swift (\`.swift\`) files in \`${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Plugins/iOS/\` to implement the native calls declared in \`Externs.cs\`. **CRITICAL:** Update imports (e.g., \`<MyTargetSDK/MyTargetSDK.h>\` to \`<${adapter_name}SDK/${adapter_name}SDK.h>\`) and native SDK calls. See '${adapter_root_dir}/IronSource/source/plugin/Assets/GoogleMobileAds/Mediation/IronSource/Plugins/iOS/GADUMIronSourceInterface.m' for an example."
+echo "    -   **iOS:** Create Objective-C (\`.m\`) or Swift (\`.swift\`) files in \`${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Plugins/iOS/\` to implement the native calls declared in \`Externs.cs\`. **CRITICAL:** Update imports (e.g., \`<HyBid/HyBid.h>\` to \`<${adapter_name}SDK/${adapter_name}SDK.h>\`) and native SDK calls. See '${adapter_root_dir}/IronSource/source/plugin/Assets/GoogleMobileAds/Mediation/IronSource/Plugins/iOS/GADUMIronSourceInterface.m' for an example."
 echo "    -   **Android:** Place any required Android AAR libraries in \`${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Plugins/Android/\`. If using \`-with_extras\`, review and update the Gradle project under \`${new_adapter_dir}/source/android-library/\`."
 echo ""
 if [[ "$with_extras" == true ]]; then
