@@ -16,12 +16,20 @@ using GoogleMobileAds.Api.Mediation;
 
 namespace GoogleMobileAds.Mediation.LiftoffMonetize.Api
 {
-    public abstract class LiftoffMonetizeMediationExtras : MediationExtras
+    public class LiftoffMonetizeMediationExtras : MediationExtras
     {
         public const string UserIdKey = "user_id";
         public const string BackButtonImmediatelyEnabledKey = "back_button_immediately_enabled";
 
         public LiftoffMonetizeMediationExtras() : base() { }
+
+        public override string AndroidMediationExtraBuilderClassName
+        {
+            get
+            {
+                return "com.google.unity.mediation.liftoffmonetize.VungleUnityExtrasBuilder";
+            }
+        }
 
         public override string IOSMediationExtraBuilderClassName
         {

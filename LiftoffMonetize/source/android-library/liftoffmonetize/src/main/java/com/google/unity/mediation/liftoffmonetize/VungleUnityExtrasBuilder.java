@@ -16,14 +16,15 @@ package com.google.unity.mediation.liftoffmonetize;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import androidx.annotation.NonNull;
 import com.google.ads.mediation.vungle.VungleConstants;
+import com.google.ads.mediation.vungle.VungleMediationAdapter;
+import com.google.android.gms.ads.mediation.MediationExtrasReceiver;
 import com.google.unity.ads.AdNetworkExtras;
 import java.util.HashMap;
 
-/**
- * Mediation extras bundle class for the Liftoff Monetize adapter.
- */
-abstract class VungleUnityExtrasBuilder implements AdNetworkExtras {
+/** Mediation extras bundle class for the Liftoff Monetize adapter. */
+public class VungleUnityExtrasBuilder implements AdNetworkExtras {
 
   private static final String USER_ID_KEY = "user_id";
   private static final String BACK_BUTTON_IMMEDIATELY_ENABLED_KEY =
@@ -46,5 +47,11 @@ abstract class VungleUnityExtrasBuilder implements AdNetworkExtras {
     }
 
     return vungleExtras;
+  }
+
+  @NonNull
+  @Override
+  public Class<? extends MediationExtrasReceiver> getAdapterClass() {
+    return VungleMediationAdapter.class;
   }
 }
