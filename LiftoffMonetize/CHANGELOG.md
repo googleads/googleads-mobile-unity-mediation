@@ -1,6 +1,6 @@
 ## Liftoff Monetize Unity Mediation Plugin Changelog
 
-#### Next Version
+#### Version 5.7.6 (In progress)
 - Fixed an issue where mediation extras were not being properly forwarded to the Liftoff Monetize adapter.
 
 #### [Version 5.7.5](https://dl.google.com/googleadmobadssdk/mediation/unity/liftoffmonetize/LiftoffMonetizeUnityAdapter-5.7.5.zip)
