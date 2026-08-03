@@ -1,5 +1,7 @@
 ## Verve Unity Mediation Plugin Changelog
 
+#### Version 1.1.0 (In progress)
+
 #### Version 1.0.0
 
 - First release!
