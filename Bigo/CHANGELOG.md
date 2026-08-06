@@ -1,6 +1,9 @@
 ## BIGO Ads SDK Unity Mediation Plugin Changelog
 
-#### Version 1.1.0 (In progress)
+#### [Version 1.1.0](https://dl.google.com/googleadmobadssdk/mediation/unity/bigo/BigoUnityAdapter-1.1.0.zip)
+- Supports [BIGO Ads SDK Android adapter version 5.10.1.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/bigo/CHANGELOG.md#version-51010).
+- Supports [BIGO Ads SDK iOS adapter version 5.3.0.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Bigo/CHANGELOG.md#version-5300).
+- Built and tested with the Google Mobile Ads Unity Plugin version 11.3.0.
 
 #### [Version 1.0.0](https://dl.google.com/googleadmobadssdk/mediation/unity/bigo/BigoUnityAdapter-1.0.0.zip)
 - Initial release!
