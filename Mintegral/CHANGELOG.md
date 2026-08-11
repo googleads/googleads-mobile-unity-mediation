@@ -1,5 +1,7 @@
 ## Mintegral Unity Mediation Plugin Changelog
 
+#### Version 2.2.4 (In progress)
+
 #### [Version 2.2.3](https://dl.google.com/googleadmobadssdk/mediation/unity/mintegral/MintegralUnityAdapter-2.2.3.zip)
 - Supports [Mintegral Android adapter version 17.1.61.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/mintegral/CHANGELOG.md#version-171611).
 - Supports [Mintegral iOS adapter version 8.1.5.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Mintegral/CHANGELOG.md#version-8150).
