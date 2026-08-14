@@ -11,9 +11,11 @@
   ],
   "author": {
     "name": "Google LLC",
-    "url": "https://github.com/googleads/googleads-mobile-unity"
+    "url": "https://github.com/googleads/googleads-mobile-unity-mediation"
   },
   "description": "The Google Mobile Ads mediation plugin for i-mobile package allows you to load and display ads from i-mobile using mediation, covering waterfall integration.",
+  "documentationUrl": "https://developers.google.com/admob/unity/mediation/imobile",
+  "changelogUrl": "https://developers.google.com/admob/unity/mediation/imobile#i-mobile-unity-mediation-plugin-changelog",
   "unity": "2022.3",
   "unityRelease": "0f1",
   "dependencies": {

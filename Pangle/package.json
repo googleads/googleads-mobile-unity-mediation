@@ -14,6 +14,8 @@
     "url": "https://github.com/googleads/googleads-mobile-unity-mediation"
   },
   "description": "The Google Mobile Ads mediation plugin for Pangle package allows you to load and display ads from Pangle using mediation, covering waterfall and bidding integrations.",
+  "documentationUrl": "https://developers.google.com/admob/unity/mediation/pangle",
+  "changelogUrl": "https://developers.google.com/admob/unity/mediation/pangle#pangle-unity-mediation-plugin-changelog",
   "unity": "2022.3",
   "unityRelease": "0f1",
   "dependencies": {

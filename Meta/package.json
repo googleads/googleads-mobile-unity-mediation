@@ -14,6 +14,8 @@
     "url": "https://github.com/googleads/googleads-mobile-unity-mediation"
   },
   "description": "The Google Mobile Ads mediation plugin for Meta package allows you to load and display ads from Meta Audience Network using mediation, covering bidding integrations.",
+  "documentationUrl": "https://developers.google.com/admob/unity/mediation/meta",
+  "changelogUrl": "https://developers.google.com/admob/unity/mediation/meta#meta-audience-network-unity-mediation-plugin-changelog",
   "unity": "2022.3",
   "unityRelease": "0f1",
   "dependencies": {

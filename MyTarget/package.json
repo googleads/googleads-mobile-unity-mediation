@@ -14,6 +14,8 @@
     "url": "https://github.com/googleads/googleads-mobile-unity-mediation"
   },
   "description": "The Google Mobile Ads mediation plugin for myTarget package allows you to load and display ads from myTarget using mediation, covering waterfall integrations.",
+  "documentationUrl": "https://developers.google.com/admob/unity/mediation/mytarget",
+  "changelogUrl": "https://developers.google.com/admob/unity/mediation/mytarget#mytarget-unity-mediation-plugin-changelog",
   "unity": "2022.3",
   "unityRelease": "0f1",
   "dependencies": {

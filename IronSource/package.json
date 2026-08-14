@@ -14,6 +14,8 @@
     "url": "https://github.com/googleads/googleads-mobile-unity-mediation"
   },
   "description": "The Google Mobile Ads mediation plugin for IronSource package allows you to load and display ads from IronSource using mediation, covering waterfall and bidding integrations.",
+  "documentationUrl": "https://developers.google.com/admob/unity/mediation/ironsource",
+  "changelogUrl": "https://developers.google.com/admob/unity/mediation/ironsource#ironsource-unity-mediation-plugin-changelog",
   "unity": "2022.3",
   "unityRelease": "0f1",
   "dependencies": {

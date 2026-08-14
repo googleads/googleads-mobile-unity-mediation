@@ -11,9 +11,11 @@
   ],
   "author": {
     "name": "Google LLC",
-    "url": "https://github.com/googleads/googleads-mobile-unity"
+    "url": "https://github.com/googleads/googleads-mobile-unity-mediation"
   },
   "description": "The Google Mobile Ads mediation plugin for Maio package allows you to load and display ads from Maio using mediation, covering waterfall integrations.",
+  "documentationUrl": "https://developers.google.com/admob/unity/mediation/maio",
+  "changelogUrl": "https://developers.google.com/admob/unity/mediation/maio#maio-unity-mediation-plugin-changelog",
   "unity": "2022.3",
   "unityRelease": "0f1",
   "dependencies": {
