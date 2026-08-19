@@ -1,5 +1,7 @@
 ## i-mobile Unity Mediation Plugin Changelog
 
+#### Version 1.3.15 (In progress)
+
 #### Version 1.3.14 (In progress)
 
 #### [Version 1.3.13](https://dl.google.com/googleadmobadssdk/mediation/unity/imobile/IMobileUnityAdapter-1.3.13.zip)
