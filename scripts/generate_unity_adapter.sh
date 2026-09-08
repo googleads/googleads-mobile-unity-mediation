@@ -173,7 +173,6 @@ mkdir -p "${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${ad
 echo "Copying template files from ${template_adapter_dir}..."
 # Root files
 cp "${adapter_root_dir}/LICENSE" "${new_adapter_dir}/LICENSE"
-cp "${adapter_root_dir}/CONTRIBUTING.md" "${new_adapter_dir}/CONTRIBUTING.md"
 cp "${template_adapter_dir}/README.md" "${new_adapter_dir}/README.md"
 cp "${template_adapter_dir}/CHANGELOG.md" "${new_adapter_dir}/CHANGELOG.md"
 cp "${template_adapter_dir}/build.gradle" "${new_adapter_dir}/build.gradle"
