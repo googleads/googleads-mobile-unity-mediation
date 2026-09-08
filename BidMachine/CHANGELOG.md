@@ -1,5 +1,7 @@
 ## BidMachine Unity Mediation Plugin Changelog
 
+#### Version 1.5.0 (In progress)
+
 #### [Version 1.4.2](https://dl.google.com/googleadmobadssdk/mediation/unity/bidmachine/BidMachineUnityAdapter-1.4.2.zip)
 - Supports [BidMachine Android adapter version 3.7.1.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/bidmachine/CHANGELOG.md#version-3711).
 - Supports [BidMachine iOS adapter version 3.7.1.0.1](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/BidMachine/CHANGELOG.md#version-3710).
