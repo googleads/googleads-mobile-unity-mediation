@@ -1,5 +1,7 @@
 ## Line Unity Mediation Plugin Changelog
 
+#### Version 2.2.1 (In progress)
+
 #### [Version 2.2.0](https://dl.google.com/googleadmobadssdk/mediation/unity/line/LineUnityAdapter-2.2.0.zip)
 - Supports [Line Android adapter version 3.1.1.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/line/CHANGELOG.md#version-3111).
 - Supports [Line iOS adapter version 3.1.0.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Line/CHANGELOG.md#version-3100).
