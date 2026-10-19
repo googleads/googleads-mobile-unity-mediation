@@ -1,5 +1,7 @@
 ## Verve Unity Mediation Plugin Changelog
 
+#### Version 1.1.3 (In progress)
+
 #### [Version 1.1.2](https://dl.google.com/googleadmobadssdk/mediation/unity/verve/VerveUnityAdapter-1.1.2.zip)
 - Supports [Verve Android adapter version 3.9.2.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/verve/CHANGELOG.md#version-3920).
 - Supports [Verve iOS adapter version 3.9.2.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Verve/CHANGELOG.md#version-3920).
