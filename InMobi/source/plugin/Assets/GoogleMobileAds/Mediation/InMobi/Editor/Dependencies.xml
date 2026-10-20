@@ -24,6 +24,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-inmobi.git" version="11.5.000" target="All">
+      <swiftPackage name="InMobiAdapterTarget" replacesPod="GoogleMobileAdsMediationInMobi,InMobiSDK" target="All"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationInMobi" version="11.5.0.0"/>
     <iosPod name="InMobiSDK" addToAllTargets="true"/>
