@@ -24,6 +24,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-liftoffmonetize.git" version="7.7.800" target="All">
+      <swiftPackage name="LiftoffMonetizeAdapterTarget" replacesPod="GoogleMobileAdsMediationVungle" target="All"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationVungle" version="7.7.3.0.1"/>
   </iosPods>
