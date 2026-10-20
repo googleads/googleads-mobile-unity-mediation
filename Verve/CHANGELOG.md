@@ -1,6 +1,8 @@
 ## Verve Unity Mediation Plugin Changelog
 
 #### Version 1.1.3 (In progress)
+- Add Swift Package Manager (SPM) support for Verve Unity adapter.
+- Update the minimum required Unity plugin version to 11.7.0.
 
 #### [Version 1.1.2](https://dl.google.com/googleadmobadssdk/mediation/unity/verve/VerveUnityAdapter-1.1.2.zip)
 - Supports [Verve Android adapter version 3.9.2.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/verve/CHANGELOG.md#version-3920).
