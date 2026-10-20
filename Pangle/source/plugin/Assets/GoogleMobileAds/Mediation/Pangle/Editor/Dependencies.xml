@@ -25,6 +25,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-pangle.git" version="8.3.00800">
+      <swiftPackage name="PangleAdapterTarget" replacesPod="GoogleMobileAdsMediationPangle"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationPangle" version="8.3.0.8.0"/>
   </iosPods>
