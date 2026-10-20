@@ -1,5 +1,9 @@
 ## Moloco Unity Mediation Plugin Changelog
 
+#### Next Version
+- Add Swift Package Manager (SPM) support for Moloco Unity adapter.
+- Update the minimum required Unity plugin version to 11.7.0.
+
 #### Version 3.11.0 (In progress)
 
 #### [Version 3.10.1](https://dl.google.com/googleadmobadssdk/mediation/unity/moloco/MolocoUnityAdapter-3.10.1.zip)
