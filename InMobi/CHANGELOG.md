@@ -1,6 +1,8 @@
 ## InMobi Unity Mediation Plugin Changelog
 
-#### Version 5.4.0 (In progress)
+#### Next Version
+- Add Swift Package Manager (SPM) support for InMobi Unity adapter.
+- Updated the minimum required Unity plugin version to 11.7.0.
 
 #### [Version 5.3.3](https://dl.google.com/googleadmobadssdk/mediation/unity/inmobi/InMobiUnityAdapter-5.3.3.zip)
 - Supports [InMobi Android adapter version 11.4.1.2](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/inmobi/CHANGELOG.md#version-11412).
