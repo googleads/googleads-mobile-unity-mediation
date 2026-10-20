@@ -1,5 +1,9 @@
 ## IronSource Unity Mediation Plugin Changelog
 
+#### Next Version
+- Add Swift Package Manager (SPM) support for ironSource Unity adapter.
+- Updated the minimum required Unity plugin version to 11.7.0.
+
 #### [Version 4.8.0](https://dl.google.com/googleadmobadssdk/mediation/unity/ironsource/IronSourceUnityAdapter-4.8.0.zip)
 - Supports [IronSource Android adapter version 9.6.0.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/ironsource/CHANGELOG.md#version-9601).
 - Supports [IronSource iOS adapter version 9.6.0.0.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/IronSource/CHANGELOG.md#version-96000).
