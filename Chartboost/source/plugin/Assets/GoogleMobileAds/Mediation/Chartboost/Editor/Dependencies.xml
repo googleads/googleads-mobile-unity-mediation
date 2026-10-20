@@ -25,6 +25,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-chartboost.git" version="9.14.200">
+      <swiftPackage name="ChartboostAdapterTarget" replacesPod="GoogleMobileAdsMediationChartboost"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationChartboost" version="9.14.2.0"/>
   </iosPods>

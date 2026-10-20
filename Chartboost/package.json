@@ -20,6 +20,6 @@
   "unity": "2022.3",
   "unityRelease": "0f1",
   "dependencies": {
-    "com.google.ads.mobile": "11.0.0"
+    "com.google.ads.mobile": "11.7.0"
   }
 }
