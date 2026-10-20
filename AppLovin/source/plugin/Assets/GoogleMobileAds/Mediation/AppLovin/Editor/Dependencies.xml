@@ -24,6 +24,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-applovin.git" version="13.6.300" target="All">
+      <swiftPackage name="AppLovinAdapterTarget" replacesPod="GoogleMobileAdsMediationAppLovin,AppLovinSDK" target="All"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationAppLovin" version="13.6.4.0"/>
     <iosPod name="AppLovinSDK" addToAllTargets="true"/>
