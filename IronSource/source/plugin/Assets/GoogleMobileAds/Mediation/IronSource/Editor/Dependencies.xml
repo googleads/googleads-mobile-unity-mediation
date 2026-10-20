@@ -24,6 +24,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-ironsource.git" version="9.6.00000">
+      <swiftPackage name="IronSourceAdapterTarget" replacesPod="GoogleMobileAdsMediationIronSource"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationIronSource" version="9.6.0.0.0"/>
   </iosPods>
