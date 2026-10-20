@@ -1,6 +1,8 @@
 ## DT Exchange Unity Mediation Plugin Changelog
 
-#### Version 3.6.0 (In progress)
+#### Next Version
+- Add Swift Package Manager (SPM) support for DT Exchange Unity adapter.
+- Updated the minimum required Unity plugin version to 11.7.0.
 
 #### [Version 3.5.13](https://dl.google.com/googleadmobadssdk/mediation/unity/dtexchange/DTExchangeUnityAdapter-3.5.13.zip)
 - Supports [DT Exchange Android adapter version 8.4.7.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/dtexchange/CHANGELOG.md#version-8471).

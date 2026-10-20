@@ -24,6 +24,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-dtexchange.git" version="8.5.000">
+      <swiftPackage name="DTExchangeAdapterTarget" replacesPod="GoogleMobileAdsMediationFyber"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationFyber" version="8.5.0.0"/>
   </iosPods>
