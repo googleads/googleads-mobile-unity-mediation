@@ -24,6 +24,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-line.git" version="3.1.100">
+      <swiftPackage name="LineAdapterTarget" replacesPod="GoogleMobileAdsMediationLine"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationLine" version="3.0.1.1.1"/>
   </iosPods>
