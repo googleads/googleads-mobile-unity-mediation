@@ -1,6 +1,8 @@
 ## Chartboost Unity Mediation Plugin Changelog
 
-#### Version 4.15.2 (In progress)
+#### Next Version
+- Add Swift Package Manager (SPM) support for Chartboost Unity adapter.
+- Updated the minimum required Unity plugin version to 11.7.0.
 
 #### [Version 4.15.1](https://dl.google.com/googleadmobadssdk/mediation/unity/chartboost/ChartboostUnityAdapter-4.15.1.zip)
 - Supports [Chartboost Android adapter version 9.14.1.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/chartboost/CHANGELOG.md#version-91410).
