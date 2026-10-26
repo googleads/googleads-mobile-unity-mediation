@@ -1,5 +1,9 @@
 ## Mintegral Unity Mediation Plugin Changelog
 
+#### [Next Version]
+- Add Swift Package Manager (SPM) support for Mintegral Unity adapter.
+- Update the minimum required Unity plugin version to 11.7.0.
+
 #### [Version 2.2.6](https://dl.google.com/googleadmobadssdk/mediation/unity/mintegral/MintegralUnityAdapter-2.2.6.zip)
 - Supports [Mintegral Android adapter version 17.1.81.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/mintegral/CHANGELOG.md#version-171811).
 - Supports [Mintegral iOS adapter version 8.1.7.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Mintegral/CHANGELOG.md#version-8170).
