@@ -25,6 +25,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-verve.git" version="3.9.300" target="All">
+      <swiftPackage name="VerveAdapterTarget" replacesPod="GoogleMobileAdsMediationVerve,HyBid" target="All"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationVerve" version="3.9.3.0"/>
     <iosPod name="HyBid" addToAllTargets="true"/>
