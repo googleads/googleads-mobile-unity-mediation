@@ -8,6 +8,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-moloco.git" version="4.11.100" target="All">
+      <swiftPackage name="MolocoAdapterTarget" replacesPod="GoogleMobileAdsMediationMoloco,MolocoSDKiOS" target="All"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationMoloco" version="4.11.1.0"/>
     <iosPod name="MolocoSDKiOS" addToAllTargets="true"/>
