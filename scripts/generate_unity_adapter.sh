@@ -178,7 +178,6 @@ cp "${template_adapter_dir}/CHANGELOG.md" "${new_adapter_dir}/CHANGELOG.md"
 cp "${template_adapter_dir}/build.gradle" "${new_adapter_dir}/build.gradle"
 cp "${template_adapter_dir}/package.json" "${new_adapter_dir}/package.json"
 cp "${template_adapter_dir}/METADATA" "${new_adapter_dir}/METADATA"
-cp "${template_adapter_dir}/rapid.blueprint" "${new_adapter_dir}/rapid.blueprint"
 
 # (Removed copying template .meta files directly to prevent duplicate GUID conflicts.
 # They are now generated dynamically with path-based stable GUIDs in Step 5.)
@@ -249,7 +248,7 @@ find "${new_adapter_dir}" -type f -exec bash -c 'make_writable "$0"' {} \;
 
 # Now perform the sed replacements
 echo "Performing text replacements..."
-find "${new_adapter_dir}" -type f \( -name "*.md" -o -name "*.cs" -o -name "*.xml" -o -name "*.gradle" -o -name "*.json" -o -name "*.blueprint" -o -name "*.m" -o -name "*.h" -o -name "*.java" -o -name "*.properties" -o -name "*.pgcfg" \) -exec sed -i '' \
+find "${new_adapter_dir}" -type f \( -name "*.md" -o -name "*.cs" -o -name "*.xml" -o -name "*.gradle" -o -name "*.json" -o -name "*.m" -o -name "*.h" -o -name "*.java" -o -name "*.properties" -o -name "*.pgcfg" \) -exec sed -i '' \
   -e "s/Verve/${adapter_name}/g" \
   -e "s/verve/${adapter_name_lower_cased}/g" \
   -e "s/VERVE/${adapter_name_upper_cased}/g" \
@@ -395,4 +394,12 @@ if [[ "$with_extras" == true ]]; then
 fi
 echo ""
 echo "7.  **.meta Files:** While copied, Unity might regenerate GUIDs. Check if any assets fail to link in Unity and update GUIDs in the \`.meta\` files if necessary."
+echo ""
+echo "8.  **Rapid Blueprint Registration:**"
+echo "    -   Add the adapter entries in \`google3/ads/admob/client/mediation/cross_platform_adapters/rapid/adapter_matrix_data.{gcl,ncl}\`."
+if [[ "$with_extras" == true ]]; then
+  echo "    -   Add the \`::Rapid::ReleasableUnit(adapter_matrix_data::Adapters.${adapter_name}, is_aar_adapter = true)\` entry to \`releasable_units\` in \`google3/third_party/unity/gma_sdk_mediation/rapid.blueprint\`."
+else
+  echo "    -   Add the \`::Rapid::ReleasableUnit(adapter_matrix_data::Adapters.${adapter_name})\` entry to \`releasable_units\` in \`google3/third_party/unity/gma_sdk_mediation/rapid.blueprint\` (pass \`is_aar_adapter = true\` if the adapter includes Android AAR extras)."
+fi
 echo ""
