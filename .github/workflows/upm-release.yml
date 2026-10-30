@@ -122,6 +122,59 @@ jobs:
         env:
           STEPS_PACKAGE_OUTPUTS_PKG_DIR: ${{ steps.package.outputs.pkg_dir }}
 
+      # Unity 6.3+ flags UPM tarballs that are not signed. The package is
+      # packed and signed with the Unity Package Manager CLI
+      # (https://docs.unity3d.com/6000.3/Documentation/Manual/upm-cli-install.html)
+      # and the signed tarball is attached to the GitHub Release so that OpenUPM
+      # can serve it unchanged (`githubRelease` tracking mode).
+      - name: Install Unity UPM CLI
+        if: steps.package.outputs.pkg_dir != ''
+        run: |
+          curl -fsSL https://cdn.packages.unity.com/upm-cli/install.sh | bash
+          echo "${HOME}/.upm/bin" >> "${GITHUB_PATH}"
+
+      - name: Build and sign UPM package tarball
+        id: sign_package
+        if: steps.package.outputs.pkg_dir != ''
+        env:
+          STEPS_PACKAGE_OUTPUTS_PKG_DIR: ${{ steps.package.outputs.pkg_dir }}
+          STEPS_PACKAGE_INFO_OUTPUTS_VERSION: ${{ steps.package_info.outputs.version }}
+          # Service account with the "Package Manager Package Signer" role in
+          # the Unity organization. Configured in the repository secrets
+          # (Settings > Secrets and variables > Actions).
+          UPM_SERVICE_ACCOUNT_KEY_ID: ${{ secrets.UPM_SERVICE_ACCOUNT_KEY_ID }}
+          UPM_SERVICE_ACCOUNT_KEY_SECRET: ${{ secrets.UPM_SERVICE_ACCOUNT_KEY_SECRET }}
+          UPM_ORGANIZATION_ID: ${{ secrets.UPM_ORGANIZATION_ID }}
+        run: |
+          PKG_DIR="${STEPS_PACKAGE_OUTPUTS_PKG_DIR}"
+          VERSION="${STEPS_PACKAGE_INFO_OUTPUTS_VERSION}"
+          PKG_NAME=$(jq -r .name "$PKG_DIR/package.json")
+          DIST_DIR="${RUNNER_TEMP}/dist"
+
+          if [ -z "$UPM_SERVICE_ACCOUNT_KEY_ID" ] || [ -z "$UPM_SERVICE_ACCOUNT_KEY_SECRET" ] || [ -z "$UPM_ORGANIZATION_ID" ]; then
+            echo "[ERROR] ::error::UPM_SERVICE_ACCOUNT_KEY_ID, UPM_SERVICE_ACCOUNT_KEY_SECRET and UPM_ORGANIZATION_ID repository secrets must be configured."
+            exit 1
+          fi
+
+          mkdir -p "$DIST_DIR"
+          upm pack "$PKG_DIR" \
+            --organization-id "$UPM_ORGANIZATION_ID" \
+            --destination "$DIST_DIR"
+
+          TGZ_PATH="${DIST_DIR}/${PKG_NAME}-${VERSION}.tgz"
+          if [ ! -f "$TGZ_PATH" ]; then
+            echo "[ERROR] ::error::Expected signed tarball at $TGZ_PATH. Contents of $DIST_DIR:"
+            ls -la "$DIST_DIR"
+            exit 1
+          fi
+          # The signature is embedded in the tarball as `package/.attestation.p7m`.
+          if ! tar -tzf "$TGZ_PATH" | grep -E '^(\./)?package/\.attestation\.p7m$' >/dev/null; then
+            echo "[ERROR] ::error::$TGZ_PATH does not contain package/.attestation.p7m; the package was not signed."
+            exit 1
+          fi
+          echo "[DEBUG] Signed tarball: $TGZ_PATH"
+          echo "tgz_path=$TGZ_PATH" >> $GITHUB_OUTPUT
+
       - name: Draft or publish a GitHub Release
         id: release
         if: steps.package.outputs.pkg_dir != ''
@@ -129,23 +182,25 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           STEPS_PACKAGE_OUTPUTS_PKG_PREFIX: ${{ steps.package.outputs.pkg_prefix }}
           STEPS_PACKAGE_INFO_OUTPUTS_VERSION: ${{ steps.package_info.outputs.version }}
+          STEPS_SIGN_PACKAGE_OUTPUTS_TGZ_PATH: ${{ steps.sign_package.outputs.tgz_path }}
           GITHUB_EVENT_INPUTS_DRY_RUN: ${{ github.event.inputs.dry_run }}
         run: |
           PKG_PREFIX="${STEPS_PACKAGE_OUTPUTS_PKG_PREFIX}"
           VERSION="${STEPS_PACKAGE_INFO_OUTPUTS_VERSION}"
+          TGZ_PATH="${STEPS_SIGN_PACKAGE_OUTPUTS_TGZ_PATH}"
           TAG="$PKG_PREFIX/v$VERSION"
 
           if [[ "${GITHUB_EVENT_INPUTS_DRY_RUN}" == "true" ]]; then
-            echo "[DEBUG] Creating draft release for $TAG..."
-            gh release create "$TAG" \
+            echo "[DEBUG] Creating draft release for $TAG with signed tarball $TGZ_PATH..."
+            gh release create "$TAG" "$TGZ_PATH" \
               --draft \
               --title "$TAG" \
               --notes-file /tmp/release_notes.md
           else
-            echo "[DEBUG] Creating release for $TAG..."
+            echo "[DEBUG] Creating release for $TAG with signed tarball $TGZ_PATH..."
             git tag "$TAG"
             git push origin "$TAG"
-            gh release create "$TAG" \
+            gh release create "$TAG" "$TGZ_PATH" \
               --title "$PKG_PREFIX Unity Mediation Plugin v$VERSION" \
               --notes-file /tmp/release_notes.md
           fi
