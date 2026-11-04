@@ -25,6 +25,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-maio.git" version="2.2.300" target="All">
+      <swiftPackage name="MaioAdapterTarget" replacesPod="GoogleMobileAdsMediationMaio,MaioSDK-v2" target="All"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationMaio" version="2.2.3.0"/>
     <iosPod name="MaioSDK-v2" addToAllTargets="true"/>
