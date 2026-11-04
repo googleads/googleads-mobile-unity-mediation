@@ -25,6 +25,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+  <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-imobile.git" version="2.3.408">
+      <swiftPackage name="IMobileAdapterTarget" replacesPod="GoogleMobileAdsMediationIMobile"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationIMobile" version="2.3.4.8"/>
   </iosPods>
