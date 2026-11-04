@@ -1,5 +1,9 @@
 ## Line Unity Mediation Plugin Changelog
 
+#### Next Version
+- Add Swift Package Manager (SPM) support for LINE Unity adapter.
+- Updated the minimum required Unity plugin version to 11.7.0.
+
 #### [Version 2.2.1](https://dl.google.com/googleadmobadssdk/mediation/unity/line/LineUnityAdapter-2.2.1.zip)
 - Supports [Line Android adapter version 3.1.1.2](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/line/CHANGELOG.md#version-3112).
 - Supports [Line iOS adapter version 3.1.1.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Line/CHANGELOG.md#version-3110).
