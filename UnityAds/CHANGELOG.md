@@ -1,5 +1,9 @@
 ## Unity Ads Unity Mediation Plugin Changelog
 
+#### Next version
+- Add Swift Package Manager (SPM) support for Unity Ads Unity adapter.
+- Update the minimum required Unity plugin version to 11.7.0.
+
 #### [Version 3.22.0](https://dl.google.com/googleadmobadssdk/mediation/unity/unity/UnityAdsUnityAdapter-3.22.0.zip)
 - Supports [Unity Ads Android adapter version 4.21.0.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/unity/CHANGELOG.md#version-42100).
 - Supports [Unity Ads iOS adapter version 4.21.0.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Unity/CHANGELOG.md#version-42100).
