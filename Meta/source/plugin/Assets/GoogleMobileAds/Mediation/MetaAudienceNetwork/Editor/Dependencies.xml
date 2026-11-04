@@ -24,6 +24,12 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-meta.git" version="6.22.000" target="All">
+      <swiftPackage name="MetaAdapterTarget" replacesPod="GoogleMobileAdsMediationFacebook,FBAudienceNetwork" target="All"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationFacebook" version="6.22.0.0"/>
     <iosPod name="FBAudienceNetwork" addToAllTargets="true"/>
