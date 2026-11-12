@@ -1,5 +1,9 @@
 ## Pangle Unity Mediation Plugin Changelog
 
+#### Next Version
+- Add Swift Package Manager (SPM) support for Pangle Unity adapter.
+- Update the minimum required Unity plugin version to 11.7.0.
+
 #### [Version 7.3.0](https://dl.google.com/googleadmobadssdk/mediation/unity/pangle/PangleUnityAdapter-7.3.0.zip)
 - Supports [Pangle Android adapter version 8.4.0.5.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/pangle/CHANGELOG.md#version-84050).
 - Supports [Pangle iOS adapter version 8.4.0.5.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Pangle/CHANGELOG.md#version-84050).
