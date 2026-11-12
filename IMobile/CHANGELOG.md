@@ -1,5 +1,9 @@
 ## i-mobile Unity Mediation Plugin Changelog
 
+#### Next Version
+- Add Swift Package Manager (SPM) support for i-mobile Unity adapter.
+- Updated the minimum required Unity plugin version to 11.7.0.
+
 #### [Version 1.3.16](https://dl.google.com/googleadmobadssdk/mediation/unity/imobile/IMobileUnityAdapter-1.3.16.zip)
 - Supports [i-mobile Android adapter version 2.3.2.5](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/imobile/CHANGELOG.md#version-2325).
 - Supports [i-mobile iOS adapter version 2.3.4.8](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/I-Mobile/CHANGELOG.md#version-2348).
