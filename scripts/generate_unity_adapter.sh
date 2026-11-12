@@ -9,6 +9,7 @@
 #     [-unity_version <GMASDKUnityVersion>] \
 #     [-android_adapter_version <AndroidAdapterVersion>] \
 #     [-ios_adapter_version <iOSAdapterVersion>] \
+#     [-ios_spm_adapter_version <iOSSPMAdapterVersion>] \
 #     [-android_package_name <com.google.ads.mediation.yournetwork>] \
 #     [-ios_pod_name <GoogleMobileAdsMediationYourNetwork>] \
 #     [-with_extras]
@@ -18,6 +19,7 @@
 #   ./generate_unity_adapter.sh -adapter_name MyNewAd -version 1.0.0 \
 #     -unity_version 11.0.0 -android_adapter_version 1.2.3.0 \
 #     -ios_adapter_version 1.2.3.0 \
+#     -ios_spm_adapter_version 1.2.300 \
 #     -android_package_name com.google.ads.mediation.mynewad \
 #     -ios_pod_name GoogleMobileAdsMediationMyNewAd \
 #     -with_extras
@@ -33,6 +35,7 @@ version="1.0.0"
 unity_version="11.0.0" # Default Google Mobile Ads Unity Plugin version
 android_adapter_version="a.b.c.d"
 ios_adapter_version="x.y.z.w"
+ios_spm_adapter_version="x.y.z"
 android_package_name=""
 ios_pod_name=""
 with_extras=false
@@ -60,6 +63,10 @@ while [[ "$#" -gt 0 ]]; do
       ios_adapter_version="$2"
       shift 2
       ;;
+    -ios_spm_adapter_version)
+      ios_spm_adapter_version="$2"
+      shift 2
+      ;;
     -android_package_name)
       android_package_name="$2"
       shift 2
@@ -74,7 +81,7 @@ while [[ "$#" -gt 0 ]]; do
       ;;
     *)
       echo "Error: Invalid option '$1'"
-      echo "Usage: $0 -adapter_name <AdapterName> [-version <PluginVersion>] [-unity_version <GMASDKUnityVersion>] [-android_adapter_version <AndroidAdapterVersion>] [-ios_adapter_version <iOSAdapterVersion>] [-android_package_name <com.google.ads.mediation.yournetwork>] [-ios_pod_name <GoogleMobileAdsMediationYourNetwork>] [-with_extras]"
+      echo "Usage: $0 -adapter_name <AdapterName> [-version <PluginVersion>] [-unity_version <GMASDKUnityVersion>] [-android_adapter_version <AndroidAdapterVersion>] [-ios_adapter_version <iOSAdapterVersion>] [-ios_spm_adapter_version <iOSSPMAdapterVersion>] [-android_package_name <com.google.ads.mediation.yournetwork>] [-ios_pod_name <GoogleMobileAdsMediationYourNetwork>] [-with_extras]"
       exit 1
       ;;
   esac
@@ -82,7 +89,7 @@ done
 
 if [[ -z "$adapter_name" ]]; then
   echo "Error: -adapter_name is required."
-  echo "Usage: $0 -adapter_name <AdapterName> [-version <PluginVersion>] [-unity_version <GMASDKUnityVersion>] [-android_adapter_version <AndroidAdapterVersion>] [-ios_adapter_version <iOSAdapterVersion>] [-android_package_name <com.google.ads.mediation.yournetwork>] [-ios_pod_name <GoogleMobileAdsMediationYourNetwork>] [-with_extras]"
+  echo "Usage: $0 -adapter_name <AdapterName> [-version <PluginVersion>] [-unity_version <GMASDKUnityVersion>] [-android_adapter_version <AndroidAdapterVersion>] [-ios_adapter_version <iOSAdapterVersion>] [-ios_spm_adapter_version <iOSSPMAdapterVersion>] [-android_package_name <com.google.ads.mediation.yournetwork>] [-ios_pod_name <GoogleMobileAdsMediationYourNetwork>] [-with_extras]"
   exit 1
 fi
 
@@ -146,6 +153,7 @@ echo "Plugin Version: ${version}"
 echo "GMA Unity Plugin Version: ${unity_version}"
 echo "Android Adapter Version: ${android_adapter_version}"
 echo "iOS Adapter Version: ${ios_adapter_version}"
+echo "iOS SPM Adapter Version: ${ios_spm_adapter_version}"
 echo "Android Package Name: ${android_package_name}"
 echo "iOS Pod Name: ${ios_pod_name}"
 if [[ "$with_extras" == true ]]; then
@@ -249,6 +257,7 @@ find "${new_adapter_dir}" -type f -exec bash -c 'make_writable "$0"' {} \;
 # Now perform the sed replacements
 echo "Performing text replacements..."
 find "${new_adapter_dir}" -type f \( -name "*.md" -o -name "*.cs" -o -name "*.xml" -o -name "*.gradle" -o -name "*.json" -o -name "*.m" -o -name "*.h" -o -name "*.java" -o -name "*.properties" -o -name "*.pgcfg" \) -exec sed -i '' \
+  -e "s/googleads-mobile-ios-mediation-verve\.git\" version=\"[^\"]*\"/googleads-mobile-ios-mediation-${adapter_name_lower_cased}.git\" version=\"${ios_spm_adapter_version}\"/g" \
   -e "s/Verve/${adapter_name}/g" \
   -e "s/verve/${adapter_name_lower_cased}/g" \
   -e "s/VERVE/${adapter_name_upper_cased}/g" \
@@ -374,6 +383,7 @@ echo "3.  **${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${
 echo "    -   **CRITICAL:** Update the \`androidPackage\` and \`iosPod\` \`spec\` and \`version\` attributes to match the actual dependencies for the ${adapter_name} SDK."
 echo "    -   Add any necessary repositories for Android packages. The template includes common ones, but network-specific ones might be needed."
 echo "    -   Add any additional \`iosPod\` entries if required (e.g., for the core SDK, like 'OpenWrapSDK' in PubMatic)."
+echo "    -   Update replacesPod to include the correct core SDK pod name for your network instead of HyBid."
 echo ""
 echo "4.  **C# Implementation Files:**"
 echo "    -   **${new_adapter_dir}/source/plugin/Assets/GoogleMobileAds/Mediation/${adapter_name}/Common/I${adapter_name}Client.cs:** Define the interface methods that your Unity plugin will expose to interact with the native ${adapter_name} SDKs."
