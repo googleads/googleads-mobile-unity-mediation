@@ -34,6 +34,12 @@
 
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-unity.git" version="4.21.000">
+      <swiftPackage name="UnityAdapterTarget" replacesPod="GoogleMobileAdsMediationUnity"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationUnity" version="4.21.0.0"/>
   </iosPods>
