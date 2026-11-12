@@ -1,5 +1,9 @@
 ## PubMatic Unity Mediation Plugin Changelog
 
+#### [Next Version]
+- Add Swift Package Manager (SPM) support for PubMatic Unity adapter.
+- Update the minimum required Unity plugin version to 11.7.0.
+
 #### Version 2.5.0 (In progress)
 
 #### [Version 2.4.1](https://dl.google.com/googleadmobadssdk/mediation/unity/pubmatic/PubMaticUnityAdapter-2.4.1.zip)

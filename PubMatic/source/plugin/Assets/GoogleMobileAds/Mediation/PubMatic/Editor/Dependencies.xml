@@ -25,6 +25,15 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-pubmatic.git" version="5.5.000">
+      <swiftPackage name="PubMaticAdapterTarget" replacesPod="GoogleMobileAdsMediationPubMatic,OpenWrapSDK"/>
+    </remoteSwiftPackage>
+    <remoteSwiftPackage url="https://github.com/PubMatic/OpenWrapSDK-Swift-Package.git" version="5.5.0" upToNextMajor="true">
+      <swiftPackage name="OpenWrapSDK" target="All"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationPubMatic" version="5.5.0.0"/>
     <iosPod name="OpenWrapSDK" addToAllTargets="true"/>
