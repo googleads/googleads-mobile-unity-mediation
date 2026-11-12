@@ -1,5 +1,9 @@
 ## Liftoff Monetize Unity Mediation Plugin Changelog
 
+#### Next Version
+- Add Swift Package Manager (SPM) support for Liftoff Monetize Unity adapter.
+- Updated the minimum required Unity plugin version to 11.7.0.
+
 #### [Version 5.7.10](https://dl.google.com/googleadmobadssdk/mediation/unity/liftoffmonetize/LiftoffMonetizeUnityAdapter-5.7.10.zip)
 - Supports [Liftoff Monetize Android adapter version 7.7.8.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/liftoffmonetize/CHANGELOG.md#version-7781).
 - Supports [Liftoff Monetize iOS adapter version 7.7.8.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/LiftoffMonetize/CHANGELOG.md#version-7780).
