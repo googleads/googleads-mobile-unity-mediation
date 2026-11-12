@@ -25,6 +25,15 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-bidmachine.git" version="3.8.100">
+      <swiftPackage name="BidMachineAdapterTarget" replacesPod="GoogleMobileAdsMediationBidMachine,BidMachine"/>
+    </remoteSwiftPackage>
+    <remoteSwiftPackage url="https://github.com/bidmachine/BidMachine-SPM.git" version="3.8.1" upToNextMajor="true">
+      <swiftPackage name="BidMachine" target="All"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationBidMachine" version="3.8.2.0"/>
   </iosPods>
