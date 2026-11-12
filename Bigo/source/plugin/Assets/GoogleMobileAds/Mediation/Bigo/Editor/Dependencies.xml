@@ -24,6 +24,15 @@
     </androidPackage>
   </androidPackages>
 
+  <remoteSwiftPackages>
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-bigo.git" version="6.1.000">
+      <swiftPackage name="BigoAdapterTarget" replacesPod="GoogleMobileAdsMediationBigo,BigoADS"/>
+    </remoteSwiftPackage>
+    <remoteSwiftPackage url="https://github.com/bigo-ads/BigoADS-Swift-Package.git" version="6.1.0" upToNextMajor="true">
+      <swiftPackage name="BigoADS" target="All"/>
+    </remoteSwiftPackage>
+  </remoteSwiftPackages>
+
   <iosPods>
     <iosPod name="GoogleMobileAdsMediationBigo" version="6.1.0.0"/>
     <iosPod name="BigoADS" addToAllTargets="true" />
