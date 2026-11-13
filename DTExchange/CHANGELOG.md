@@ -1,6 +1,6 @@
 ## DT Exchange Unity Mediation Plugin Changelog
 
-#### Next Version
+#### Version 3.7.1 (In progress)
 - Add Swift Package Manager (SPM) support for DT Exchange Unity adapter.
 - Updated the minimum required Unity plugin version to 11.7.0.
 
