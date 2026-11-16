@@ -1,6 +1,6 @@
 ## IronSource Unity Mediation Plugin Changelog
 
-#### Next Version
+#### Version 4.10.0 (In progress)
 - Add Swift Package Manager (SPM) support for IronSource Unity adapter.
 - Updated the minimum required Unity plugin version to 11.7.0.
 
