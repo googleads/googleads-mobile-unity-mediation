@@ -25,12 +25,12 @@
   </androidPackages>
 
   <remoteSwiftPackages>
-    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-mytarget.git" version="5.47.000">
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-mytarget.git" version="5.48.000">
       <swiftPackage name="MyTargetAdapterTarget" replacesPod="GoogleMobileAdsMediationMyTarget"/>
     </remoteSwiftPackage>
   </remoteSwiftPackages>
 
   <iosPods>
-    <iosPod name="GoogleMobileAdsMediationMyTarget" version="5.47.0.0"/>
+    <iosPod name="GoogleMobileAdsMediationMyTarget" version="5.48.0.0"/>
   </iosPods>
 </dependencies>

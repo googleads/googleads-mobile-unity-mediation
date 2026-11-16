@@ -1,6 +1,6 @@
 ## myTarget Unity Mediation Plugin Changelog
 
-#### Next Version
+#### Version 3.44.0 (In progress)
 - Add Swift Package Manager (SPM) support for myTarget Unity adapter.
 - Update the minimum required Unity plugin version to 11.7.0.
 
