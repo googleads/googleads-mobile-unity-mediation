@@ -1,6 +1,6 @@
 ## BIGO Ads SDK Unity Mediation Plugin Changelog
 
-#### Next Version
+#### Version 3.2.0 (In progress)
 - Add Swift Package Manager (SPM) support for BIGO Ads SDK Unity adapter.
 - Updated the minimum required Unity plugin version to 11.7.0.
 
