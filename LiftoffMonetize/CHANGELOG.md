@@ -1,6 +1,6 @@
 ## Liftoff Monetize Unity Mediation Plugin Changelog
 
-#### Next Version
+#### Version 5.8.0 (In progress)
 - Add Swift Package Manager (SPM) support for Liftoff Monetize Unity adapter.
 - Updated the minimum required Unity plugin version to 11.7.0.
 
