@@ -25,10 +25,10 @@
   </androidPackages>
 
   <remoteSwiftPackages>
-    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-applovin.git" version="13.6.400">
+    <remoteSwiftPackage url="https://github.com/googleads/googleads-mobile-ios-mediation-applovin.git" version="13.7.000">
       <swiftPackage name="AppLovinAdapterTarget" replacesPod="GoogleMobileAdsMediationAppLovin,AppLovinSDK"/>
     </remoteSwiftPackage>
-    <remoteSwiftPackage url="https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git" version="13.6.4" upToNextMajor="true">
+    <remoteSwiftPackage url="https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git" version="13.7.0" upToNextMajor="true">
     <swiftPackage name="AppLovinSDK" target="All"/>
     </remoteSwiftPackage>
   </remoteSwiftPackages>
