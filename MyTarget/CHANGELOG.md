@@ -1,8 +1,11 @@
 ## myTarget Unity Mediation Plugin Changelog
 
-#### Version 3.44.0 (In progress)
-- Add Swift Package Manager (SPM) support for myTarget Unity adapter.
-- Update the minimum required Unity plugin version to 11.7.0.
+#### [Version 3.44.0](https://dl.google.com/googleadmobadssdk/mediation/unity/mytarget/MyTargetUnityAdapter-3.44.0.zip)
+- Added Swift Package Manager (SPM) support for myTarget Unity adapter.
+- Updated the minimum required GMA Unity plugin version to 11.7.0.
+- Supports [myTarget Android adapter version 5.52.5.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/mytarget/CHANGELOG.md#version-55250).
+- Supports [myTarget iOS adapter version 5.48.0.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/MyTarget/CHANGELOG.md#version-54800).
+- Built and tested with the Google Mobile Ads Unity Plugin version 11.7.0.
 
 #### [Version 3.43.0](https://dl.google.com/googleadmobadssdk/mediation/unity/mytarget/MyTargetUnityAdapter-3.43.0.zip)
 - Supports [myTarget Android adapter version 5.52.5.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/mytarget/CHANGELOG.md#version-55250).
