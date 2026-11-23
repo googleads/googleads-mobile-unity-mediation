@@ -1,8 +1,11 @@
 ## BIGO Ads SDK Unity Mediation Plugin Changelog
 
-#### Version 3.2.0 (In progress)
-- Add Swift Package Manager (SPM) support for BIGO Ads SDK Unity adapter.
-- Updated the minimum required Unity plugin version to 11.7.0.
+#### [Version 3.2.0](https://dl.google.com/googleadmobadssdk/mediation/unity/bigo/BigoUnityAdapter-3.2.0.zip)
+- Added Swift Package Manager (SPM) support for BIGO Ads SDK Unity adapter.
+- Updated the minimum required GMA Unity plugin version to 11.7.0.
+- Supports [BIGO Ads SDK Android adapter version 6.2.0.1](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/bigo/CHANGELOG.md#version-6201).
+- Supports [BIGO Ads SDK iOS adapter version 6.2.0.0](https://github.com/googleads/googleads-mobile-ios-mediation/blob/main/adapters/Bigo/CHANGELOG.md#version-6200).
+- Built and tested with the Google Mobile Ads Unity Plugin version 11.7.0.
 
 #### [Version 3.1.0](https://dl.google.com/googleadmobadssdk/mediation/unity/bigo/BigoUnityAdapter-3.1.0.zip)
 - Supports [BIGO Ads SDK Android adapter version 6.1.0.0](https://github.com/googleads/googleads-mobile-android-mediation/blob/main/ThirdPartyAdapters/bigo/CHANGELOG.md#version-6100).
